@@ -1,0 +1,197 @@
+                         !!!!!!! Preview of v2.0 !!!!!!
+
+                ÄÄÄÄÄ  Extreme's Tracker. AMS Format v2.0 ÄÄÄÄÄÄ
+
+Offs   Byte(s)	Desc
+
+[Header]
+0       7       Header: "AMShdr",1ah
+7       1       Length of ModName (max 30 bytes)
+8       x       ModName
+?       2       Version of format (Hi = MainVer, Low = SubVer e.g. 0200 = 2.0)
++2      1       Nr of Instruments (0-255)
++3      2       Nr of Patterns (1-1024)
++5      2       Nr of Positions (1-65535)
++7      1       Initial BPM
++8      1       Initial Speed
++9      1       Flags:mfsspphh
+                      ³³³³³³ÀÁÄ Pack byte header
+                      ³³³³ÀÁÄÄÄ Pack byte patterns
+                      ³³ÀÁÄÄÄÄÄ Pack byte samples
+                      ³ÀÄÄÄÄÄÄÄ Use Linear freq table.
+                      ÀÄÄÄÄÄÄÄÄ MIDI channels are used in tune.
+
+[Instrument]
+        1       Length of InstrumentName (max 30 bytes)
+        x       Instrument name
+        1       Number of samples in instrument (0-16) (if 0, skip this inst.)
+
+       96       Inst number for all notes
+
+        1       Volume Env. Speed
+        1       Volume sustain point
+        1       Volume loop start point
+        1       Volume loop end point
+        1       Number of volume points    (0-63)
+        x*3     Volume envelope info.
+                uuuuuttx xxxxxxxx yyyyyyyy
+                ³³³³³³³³ ³³³³³³³³ ÀÁÁÁÁÁÁÁÄ Volume (0-7f)
+                ³³³³³³³ÀÄÁÁÁÁÁÁÁÁÄÄÄÄÄÄÄÄÄÄ Delta X
+                ³³³³³ÀÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Curve (0=Line,1=sine 1, 2=sine 2)
+                ÀÁÁÁÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Reserved for future use.
+
+        1       Panning Env. Speed
+        1       Panning sustain point
+        1       Panning loop start point
+        1       Panning loop end point
+        1       Number of panning points   (0-63)
+        x*3     Points for panning envelope
+                uuuuuttx xxxxxxxx yyyyyyyy
+                ³³³³³³³³ ³³³³³³³³ ÀÁÁÁÁÁÁÁÄ Pan value (0-ff)
+                ³³³³³³³ÀÄÁÁÁÁÁÁÁÁÄÄÄÄÄÄÄÄÄÄ Delta X
+                ³³³³³ÀÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Curve (0=Line,1=sine 1, 2=sine 2)
+                ÀÁÁÁÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Reserved for future use.
+
+        1       Vibrato Env. Speed
+        1       Vibrato sustain point
+        1       Vibrato loop start point
+        1       Vibrato loop end point
+        1       Number of vibrato points   (0-63)
+        x*3     Points for vibrato envelope
+                uuuuuttx xxxxxxxx yyyyyyyy
+                ³³³³³³³³ ³³³³³³³³ ÀÁÁÁÁÁÁÁÄ Vibrato depth (0-ff)
+                ³³³³³³³ÀÄÁÁÁÁÁÁÁÁÄÄÄÄÄÄÄÄÄÄ Delta X
+                ³³³³³ÀÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Curve (0=Line,1=sine 1, 2=sine 2)
+                ÀÁÁÁÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Reserved for future use.
+
+        1       Vibrato sweep
+        2       Volume fadeout
+        2       Envelope flags:
+                fedcba9876543210
+                ³³³³³³³³³³³³³³³À Volume :Loop on
+                ³³³³³³³³³³³³³³ÀÄ Volume :Sustain on
+                ³³³³³³³³³³³³³ÀÄÄ Volume :Envelope on
+                ³³³³³³³³³³³³ÀÄÄÄ Panning:Loop on
+                ³³³³³³³³³³³ÀÄÄÄÄ Panning:Sustain on
+                ³³³³³³³³³³ÀÄÄÄÄÄ Panning:Envelope on
+                ³³³³³³³³³ÀÄÄÄÄÄÄ Vibrato:Loop on
+                ³³³³³³³³ÀÄÄÄÄÄÄÄ Vibrato:Sustain on
+                ³³³³³³³ÀÄÄÄÄÄÄÄÄ Vibrato:Envelope on
+                ³³³³³³ÀÄÄÄÄÄÄÄÄÄ Volume :Break Loop
+                ³³³³³ÀÄÄÄÄÄÄÄÄÄÄ Panning:Break Loop
+                ³³³³ÀÄÄÄÄÄÄÄÄÄÄÄ Vibrato:Break Loop
+                ÀÁÁÁÄÄÄÄÄÄÄÄÄÄÄÄ Reserved
+
+[Sample]       (repeated for each sample in the Instrument)
+        1       Length of SampName (max 22 bytes)
+        x       SampName
+        4       Length Of Sample   (if 0, skip this sample.)
+	4	Repeat Start for sample
+	4	Repeat End for sample
+        2       Sampled rate (the rate the sample is sampled in)
+	1	Hi Nibble=PanPosition, Lo Nibble=FineTuneValue
+	2	SampleRate for C-2 (normally 8363Hz)
+        1       Relative note (signed byte)
+        1       Volume (0-127)
+        1       Info Byte 76543210
+                          ³³³³³³ÀÁÄ Reserved
+                          ³³³³³ÀÄÄÄ 16 bit sample
+                          ³³³³ÀÄÄÄÄ Looped sample
+                          ³³³ÀÄÄÄÄÄ PingPong loop
+                          ³³ÀÄÄÄÄÄÄ Reserved
+                          ³ÀÄÄÄÄÄÄÄ Direction (1=Reversed)
+                          ÀÄÄÄÄÄÄÄÄ Reserved
+
+ Data for rest of Instruments are exactly the same!
+
+[Text]
+        1       Length of Composer name (max 30 bytes)
+        x       Composer Name
+      Ú>1       Length of ChannelName (max 11 bytes)
+      ÀÄx       ChannelName
+         4       Length of Description (packed, inclusive header)
+         4       Length of Description (unpacked)
+         1       Version of packroutine (currently 01h)
+         1       PreProcessing type (currently none)
+         1       Packing method (Currently RLE with #255 as packbyte)
+         x       Description of Module
+
+ The Number of ChannelNames are always 32.
+
+[PatternOrder]
+	x	PatternNr. Holds number (0-65535) to tell the tracker what
+                pattern to play at that position (x=Nr of Positions)
+
+[PatternData SampleChannels]
+	4	PatternSize (packed)
+        1       PatternLength-1 (0-255)
+        1       cccsssss
+                c = Nr of Commands used in pattern
+                s = Nr of Channels-1 used in pattern (0-31)
+        1       Length of PatternName (max 10 bytes)
+        x       PatternName
+        x       PatternData
+
+        fp0aaaaa ennnnnnn iiiiiiii [rgcccccc bbbbbbbb...]
+
+		Legend:
+                f       1=Last data chunk on the row.
+                p       0=Only Read Period+SampleNr, 1=Only Read Command
+                a       Channel (0-31)
+                e       1=Read one command
+                n       Note. 12-108 (C-0 to B-7), 1=Key off note.
+                i       InstrumentNr (0-255)
+                r       1=Read one more command
+                g       1=Low 6 bits are volume/2
+                c       Command-nr
+                b       Command-byte
+
+                If first byte = -1 then this row is empty
+
+		If g is set, the command only consist of that byte and
+		the low 6 bits are assumed to be a volume command. You
+		have to multiply the volume by 2 to get the proper value
+                (Volume will only be stored this way if it's even)
+
+[Samples]
+        All samples stored after eachother, packed with a special packing
+        method not described here since we're so lazy! (You can save an AMS
+        without packing! Check the config.)
+
+
+
+  ** MIDI not yet supported. If MIDI Bit=0 then skip this section **
+
+
+[MIDI Section]
+        4       MIDI Section Size
+
+
+
+
+
+
+
+
+
+                ÄÄÄÄÄ  Extreme's Tracker. AIS Format v2.0 ÄÄÄÄÄÄ
+
+
+The only that differs the AIS format from the Instrument used in the AMS is
+the following header before the other info:
+
+Offset  bytes   Desc
+
+0       7       Header: "AIShdr",1ah
+
+
+The actual sampledata is stored right after the Instrument data.
+
+
+
+
+
+
+
+
+

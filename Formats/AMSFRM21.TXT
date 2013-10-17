@@ -1,0 +1,500 @@
+
+                         !!!!!!! Preview of v2.1 !!!!!!
+
+                       Since this version is still under
+                    development, there may be changes to the
+                    final version. In that case, the version
+                             number will be changed!
+
+                ÄÄÄÄÄ  Extreme's Tracker. AMS Format v2.1 ÄÄÄÄÄÄ
+
+Offs   Byte(s)	Desc
+
+[Header]
+0       7       Header: "AMShdr",1ah
+7       1       Length of ModName (max 30 bytes)
+8       x       ModName
+?       2       Version of format (Hi = MainVer, Low = SubVer e.g. 0201 = 2.1)
++2      1       Nr of Instruments (0-255)
++3      2       Nr of Patterns (1-1024)
++5      2       Nr of Positions (1-65535)
++7      1       Initial BPM
++8      1       Initial Speed
++9      1       Flags:mfsspphh
+                      ³³³³³³ÀÁÄ Pack byte header
+                      ³³³³ÀÁÄÄÄ Pack byte patterns
+                      ³³ÀÁÄÄÄÄÄ Pack byte samples
+                      ³ÀÄÄÄÄÄÄÄ Use Linear freq table.
+                      ÀÄÄÄÄÄÄÄÄ MIDI channels are used in tune.
+
+[Instrument]
+        1       Length of InstrumentName (max 30 bytes)
+        x       Instrument name
+        1       Number of samples in instrument (0-16) (if 0, skip this inst.)
+
+      120       Inst number for all notes
+
+        1       Volume Env. Speed
+        1       Volume sustain point
+        1       Volume loop start point
+        1       Volume loop end point
+        1       Number of volume points    (0-63)
+        x*3     Volume envelope info.
+                uuuuuttx xxxxxxxx yyyyyyyy
+                ³³³³³³³³ ³³³³³³³³ ÀÁÁÁÁÁÁÁÄ Volume (0-7f)
+                ³³³³³³³ÀÄÁÁÁÁÁÁÁÁÄÄÄÄÄÄÄÄÄÄ Delta X
+                ³³³³³ÀÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Curve (0=Line,1=sine 1, 2=sine 2)
+                ÀÁÁÁÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Reserved for future use.
+
+        1       Panning Env. Speed
+        1       Panning sustain point
+        1       Panning loop start point
+        1       Panning loop end point
+        1       Number of panning points   (0-63)
+        x*3     Points for panning envelope
+                uuuuuttx xxxxxxxx yyyyyyyy
+                ³³³³³³³³ ³³³³³³³³ ÀÁÁÁÁÁÁÁÄ Pan value (0-ff)
+                ³³³³³³³ÀÄÁÁÁÁÁÁÁÁÄÄÄÄÄÄÄÄÄÄ Delta X
+                ³³³³³ÀÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Curve (0=Line,1=sine 1, 2=sine 2)
+                ÀÁÁÁÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Reserved for future use.
+
+        1       Vibrato Env. Speed
+        1       Vibrato sustain point
+        1       Vibrato loop start point
+        1       Vibrato loop end point
+        1       Number of vibrato points   (0-63)
+        x*3     Points for vibrato envelope
+                uuuuuttx xxxxxxxx yyyyyyyy
+                ³³³³³³³³ ³³³³³³³³ ÀÁÁÁÁÁÁÁÄ Vibrato depth (0-ff)
+                ³³³³³³³ÀÄÁÁÁÁÁÁÁÁÄÄÄÄÄÄÄÄÄÄ Delta X
+                ³³³³³ÀÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Curve (0=Line,1=sine 1, 2=sine 2)
+                ÀÁÁÁÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Reserved for future use.
+
+        1       Vibrato sweep (not used in a song yet)
+        2       Vib.Amplify+Volume fadeout
+                fedcba9876543210
+                ³³³³ÀÁÁÁÁÁÁÁÁÁÁÁ Volume Fadeout.
+                ³³ÀÁÄÄÄÄÄÄÄÄÄÄÄÄ Vibrato Amplify
+                ÀÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Reserved
+
+        2       Envelope flags:
+                fedcba9876543210
+                ³³³³³³³³³³³³³³³À Volume :Loop on
+                ³³³³³³³³³³³³³³ÀÄ Volume :Sustain on
+                ³³³³³³³³³³³³³ÀÄÄ Volume :Envelope on
+                ³³³³³³³³³³³³ÀÄÄÄ Panning:Loop on
+                ³³³³³³³³³³³ÀÄÄÄÄ Panning:Sustain on
+                ³³³³³³³³³³ÀÄÄÄÄÄ Panning:Envelope on
+                ³³³³³³³³³ÀÄÄÄÄÄÄ Vibrato:Loop on
+                ³³³³³³³³ÀÄÄÄÄÄÄÄ Vibrato:Sustain on
+                ³³³³³³³ÀÄÄÄÄÄÄÄÄ Vibrato:Envelope on
+                ³³³³³³ÀÄÄÄÄÄÄÄÄÄ Volume :Break Loop
+                ³³³³³ÀÄÄÄÄÄÄÄÄÄÄ Panning:Break Loop
+                ³³³³ÀÄÄÄÄÄÄÄÄÄÄÄ Vibrato:Break Loop
+                ÀÁÁÁÄÄÄÄÄÄÄÄÄÄÄÄ Reserved
+
+[Sample]       (repeated for each sample in the Instrument)
+        1       Length of SampName (max 22 bytes)
+        x       SampName
+        4       Length Of Sample   (if 0, skip this sample.)
+	4	Repeat Start for sample
+	4	Repeat End for sample
+        2       Sampled rate (the rate the sample is sampled in)
+	1	Hi Nibble=PanPosition, Lo Nibble=FineTuneValue
+        2       SampleRate for C-4 (normally 8363Hz)
+        1       Relative note (signed byte)
+        1       Volume (0-127)
+        1       Info Byte 76543210
+                          ³³³³³³ÀÁÄ Reserved
+                          ³³³³³ÀÄÄÄ 16 bit sample
+                          ³³³³ÀÄÄÄÄ Looped sample
+                          ³³³ÀÄÄÄÄÄ PingPong loop
+                          ³³ÀÄÄÄÄÄÄ Reserved
+                          ³ÀÄÄÄÄÄÄÄ Direction (1=Reversed)
+                          ÀÄÄÄÄÄÄÄÄ Reserved
+
+ Data for rest of Instruments are exactly the same!
+
+[Text]
+        1       Length of Composer name (max 30 bytes)
+        x       Composer Name
+      Ú>1       Length of ChannelName (max 11 bytes)
+      ÀÄx       ChannelName
+        4       Length of Description (packed, inclusive header)
+         4       Length of Description (unpacked)
+         1       Version of packroutine (currently 01h)
+         1       PreProcessing type (currently none)
+         1       Packing method (Currently RLE with #255 as packbyte)
+         x       Description of Module
+
+ The Number of ChannelNames are always 32.
+
+[PatternOrder]
+	x	PatternNr. Holds number (0-65535) to tell the tracker what
+                pattern to play at that position (x=Nr of Positions)
+
+[PatternData]
+	4	PatternSize (packed)
+        1       PatternLength-1 (0-255)
+        1       cccsssss
+                c = Nr of Commands used in pattern
+                s = Nr of Channels-1 used in pattern (0-31)
+        1       Length of PatternName (max 10 bytes)
+        x       PatternName
+        x       PatternData
+
+        fp0aaaaa ennnnnnn iiiiiiii [rgcccccc bbbbbbbb...]
+
+		Legend:
+                f       1=Last data chunk on the row.
+                p       0=Only Read Period+SampleNr, 1=Only Read Command
+                a       Channel (0-31)
+                e       1=Read one command
+                n       Note. 2-121 (C-0 to B-9), 1=Key off note.
+                i       InstrumentNr (0-255)
+                r       1=Read one more command
+                g       1=Low 6 bits are volume/2
+                c       Command-nr
+                b       Command-byte
+
+                If first byte = -1 then this row is empty
+
+		If g is set, the command only consist of that byte and
+		the low 6 bits are assumed to be a volume command. You
+		have to multiply the volume by 2 to get the proper value
+                (Volume will only be stored this way if it's even)
+
+[Samples]
+        All samples stored after eachother, packed with a special packing
+        method not described here since we're so lazy! You've got a routine
+        that does the unpacking instead.
+
+
+  ** MIDI not yet supported. If MIDI Bit=0 then skip this section **
+
+
+[MIDI Section]
+        4       MIDI Section Size
+
+
+
+
+
+
+
+
+
+                ÄÄÄÄÄ  Extreme's Tracker. AIS Format v1.0 ÄÄÄÄÄÄ
+
+
+The only that differs the AIS format from the Instrument used in the AMS is
+the following header before the other info:
+
+Offset  bytes   Desc
+
+0       7       Header: "AIShdr",1ah
+8       1       Type: 0aah=new version, <1fh=old version (Only new versions
+                should exist, so don't bother with this flag)
+9       2       Version of format (Hi = MainVer, Low = SubVer e.g. 0100 = 1.0)
+
+
+The actual sampledata is stored right after the Instrument data.
+
+
+
+
+
+
+
+
+                       ÄÄÄÄÄÄÄÄÄÄÄÄÄ Volume ÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+
+(SampleVol*MasterVol*GlobalVol*ChannelMasterVol*EnvelopeVol/127^4)*FadeOut/65536
+
+
+
+                       ÄÄÄÄÄÄÄÄÄÄÄÄÄ PanPot ÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+If ChannelPan<=7 Then ChannelPan=ChannelPan-1 Else Pan=EnvelopePan/16-8+ChannelPan
+If Pan<0 Then Pan=0
+If Pan>15 Then Pan=15
+
+
+                       ÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Freq ÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+Notes ranges from 0 to 119 (C-0 - B-9)
+
+AmigaFreq:
+
+PeriodTable: 109568,103418,97614,92135,86964,82083,77476,73128,69024,65150,61493,58042
+
+Period=((Note MOD 12 [PeriodTable])/2^Note DIV 12)
+Freq=(16*428*C2rate)/Period+PerAdd
+
+Linear Freq:
+
+Freq = C2Rate*2 ^ ((Note+FreqAdd) / 12 - 4)
+
+                       ÄÄÄÄÄÄÄÄÄÄÄÄ FineTune ÄÄÄÄÄÄÄÄÄÄÄÄ
+AmigaFreq:
+
+If FineTune>7 Then FineTune=ABS(FineTune-16)
+        PerAdd=(Period-1)-(Period)*FineTune/8
+If FineTune<=7 Then PerAdd=ABS((Period)-(Period+1)*FineTune/8)
+
+(Period +/- 1 here means the Period for the note being finetuned +/- one note)
+
+Linear Freq:
+
+If FineTune>7 Then FreqAdd=NEG((FineTune-16)/8) Else FreqAdd=NEG(FineTune/8)
+(one note equals to 1 FreqAdd)
+
+
+                      ÄÄÄÄÄÄÄÄÄÄÄÄ Envelopes ÄÄÄÄÄÄÄÄÄÄÄÄ
+
+
+The Sinecurve for the envelope.
+(The 4:th part of the Sinecurve only. I calculate the other parts using this
+curve.)
+
+It has got 512 values since the maximum distance between 2 poins can be 512.
+
+EnvSine         db 0,1,2,2,3,4,5,5,6,7,8,8,9,10,11,12,12,13,14,15,16,16,17,18,19,19,20,21,22,22,23,24,25,26,26,27,28,29,30,30,31,32,33,33,34,35,36,36,37,38,39,39,40,41,42,43,43,44,45,46,46,47,48,49,49,50,51,52,52,53,54,55,55,56,57,58,58,59,60,61,61,62,63,64,64,65,66,67,67,68,69,70,70,71,72,73,74,74,75,76,76,77,78,79,79,80,81,82,82,83,84,84,85,86,87,87,88,89,90,90,91,92,93,93,94,95,96,96,97,98,98,99,100,100,101,102,103,103,104,105,106,106,107,108,108,109,110,110,111,112,113,113,114,115,115,116,117,117,118
+                db 119,119,120,121,121,122,123,123,124,125,126,126,127,127,128,129,130,130,131,132,132,133,134,134,135,136,136,137,138,138,139,139,140,141,141,142,143,143,144,145,145,146,146,147,148,148,149,150,150,151,152,152,153,153,154,155,155,156,156,157,158,158,159,160,160,161,161,162,163,163,164,164,165,166,166,167,167,168,168,169,170,170,171,171,172,173,173,174,174,175,175,176,177,177,178,178,179,179,180,180,181,181,182,182,183,184,184,185,185,186,186,187,187,188,188,189,190,190,191,191,192,192,193
+                db 193,194,194,195,195,196,196,197,197,198,198,199,199,200,200,201,201,201,202,202,203,203,204,204,205,205,206,206,207,207,207,208,208,209,209,210,210,211,211,211,212,212,213,213,214,214,214,215,215,216,216,216,217,217,218,218,219,219,219,220,220,221,221,221,222,222,223,223,223,224,224,224,225,225,225,226,226,227,227,227,228,228,228,229,229,229,230,230,230,231,231,231,232,232,232,233,233,233,234,234,234,234,235,235,235,236,236,236,237,237,237,237,238,238,238,239,239,239,239,240,240,240,240
+                db 241,241,241,241,242,242,242,242,243,243,243,243,244,244,244,244,244,245,245,245,245,246,246,246,246,246,247,247,247,247,247,248,248,248,248,248,248,249,249,249,249,249,249,250,250,250,250,250,250,250,251,251,251,251,251,251,251,252,252,252,252,252,252,252,252,253,253,253,253,253,253,253,253,253,253,253,254,254,254,254,254,254,254,254,254,254,254,254,254,254,254,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255
+
+Envelope Types:
+
+0=Line.  A straight line, as in FT2
+1=Sine1. 3:d or 4:th Part of the sinecurve depending on the locations
+         of the points between
+2=Sine2. 1:d or 2:d Part of the sinecurve depending on the locations
+         of the points between
+
+  ---
+ / | \
+| 4|1 |
+|-----|
+| 3|2 |
+ \ | /
+  ---
+
+The Break flag in the Envelope is used to stop looping the envelope when
+a keyoff is detected.
+
+Calculating the Vibrato Envelope:
+Using a sinecurve with full amplitude (80h) and Vibrato Amplify set to 3
+equals the command 4xf played on C-5 (or using Linear Freq)
+Changing the Vib Amplify is just a matter of doubling/halving the amplitude.
+0=No amplify
+1=2*Amplitude
+2=4*Amplitude
+3=8*Amplitude
+
+A simple but clear "formula":
+Amp 80h, Ampf 0 = Amp 40h, Ampf 1 = Amp 20h, Ampf 2 = Amp 10h, Ampf 3
+
+(I forgot to include the Amplify info in the last doc but it is used in v2.1)
+
+
+;²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²
+;                             UnPack sample method 1
+;²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²
+; Input:
+;         esi = input offset
+;         edi = dest offset
+;         ecx = input size
+; Output:
+;         ecx = output size
+;±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+UnPackMethod1   Proc    Near
+        pushad
+        mov     inputoffset,esi
+        mov     outputoffset,edi
+        mov     inputsize,ecx
+
+                                          ;unpacking
+        mov     esi,inputoffset
+        mov     edi,outputoffset
+        mov     ecx,dword ptr [esi]
+        mov     inputsize,ecx
+        mov     ecx,dword ptr [esi+4]
+        mov     al,byte ptr [esi+8]
+        mov     packcharacter,al
+        add     esi,9
+unpackloop:
+        lodsb
+        cmp     al,packcharacter
+        jz      unpacka
+        stosb
+        loop    unpackloop
+        jmp     endofunpack
+unpacka:
+        lodsb
+        dec     ecx
+        cmp     al,0
+        jz      putpackcharacter
+        push    ecx
+        movzx   ecx,al
+        lodsb
+        rep     stosb
+        pop     ecx
+        dec     ecx
+        loop    unpackloop
+        jmp     endofunpack
+putpackcharacter:
+        mov     al,packcharacter
+        stosb
+        loop    unpackloop
+endofunpack:
+
+        mov     edi,inputoffset         ;clear
+        mov     ecx,inputsize
+        xor     eax,eax
+        mov     edx,ecx
+        shr     ecx,2
+        rep     stosd
+        mov     ecx,edx
+        and     ecx,3
+        rep     stosb
+
+        mov     edi,inputoffset                 ;unpack bit split
+        mov     esi,outputoffset
+        mov     ebp,edi
+        mov     ecx,inputsize
+        add     ebp,ecx
+        mov     dl,10000000b
+bitunpackloop:
+        push    ecx
+
+        xor     dh,dh
+        lodsb
+        mov     ecx,8
+bitunpack2:
+        mov     bl,al
+        and     bl,dl
+        add     cl,dh
+        ror     bl,cl
+        sub     cl,dh
+        ror     dl,1
+        or      byte ptr [edi],bl
+        inc     edi
+        cmp     edi,ebp
+        jnz     notsettaback
+        mov     edi,inputoffset
+        inc     dh
+notsettaback:
+        loop    bitunpack2
+        mov     cl,dh
+        ror     dl,cl
+
+        pop     ecx
+        loop    bitunpackloop
+
+                                                ;delta unpack
+        mov     esi,inputoffset
+        mov     edi,outputoffset
+        mov     ecx,inputsize
+        xor     bl,bl
+deltaunpack:
+        lodsb
+        cmp     al,128
+        jz      notnegative
+        test    al,10000000b
+        jz      notnegative
+        and     al,01111111b
+        neg     al
+notnegative:
+        sub     bl,al
+        mov     byte ptr [edi],bl
+        inc     edi
+        loop    deltaunpack
+
+        sub     edi,outputoffset
+        mov     inputoffset,edi
+        popad
+        mov     ecx,inputoffset
+        ret
+UnPackMethod1   Endp
+
+
+General Info:
+
+* Each pattern can have different number of commands/rows/channels
+  therefore you must use a variable patternwidth and length.
+
+* Up to 7 commands/note is possible
+* When allocating the needed amount of channels, check through the
+  song to see which pattern that uses most channels.
+
+
+           New commands
+           ------------
+
+        
+ 8 0x    PanPosition (0-f)
+ E 80    Break SampleLoop
+10 00    Play Sample Forwards
+10 01    Play Sample BackWards
+10 02    Enable Bidirectional Loop
+         (only on looped samples)
+11 xx    Extra Fine Slide Up (4 times finer than normal)
+12 xx    Extra Fine Slide Down (4times finer than normal)
+13 xy    Retrig with volslide (compare with E9)
+         The x value tells if there should be a
+         volumeslide between the retrigs.
+           0: 0    (No volslide)    8: 0 (No volslide)
+           1: -1                    9: +1
+           2: -2                    A: +2
+           3: -4                    B: +4
+           4: -8                    C: +8
+           5: -16                   D: +16
+           6: 2/3 * the orig. vol.  E: 3/2 * the orig vol
+           7: 1/2 * the orig. vol.  F: 2 * the orig.vol.
+15 xx   Just Like 5, but with 2 times finer volslide.
+16 xx   Just Like 6, but with 2 times finer volslide.
+1A xx   2 times finer volslide than A.
+1C xx   Channel MasterVolume (0-7fh)
+1D xx   Long PatternBreak (use instead of 0D when using
+        long patterns). xx is in Hex
+1E 1x   Just like E1, but this uses all octaves.
+1E 2x   Just like E2, but this uses all octaves.
+1E Ax   2 times Finer volslide than EA.
+1E Bx   2 times Finer volslide than EB.
+1F 0x   Set BPM Decimal value. (0-9)
+18 xy   PanSlide x=left speed, y=right speed.
+20 xx   Key Off at tic xx
+21 xx   Just like 1, but this uses all octaves.
+22 xx   Just like 2, but this uses all octaves.
+2A xx   Global VolumeSlide
+2C xx   Global Volume (0-7fh)
+
+
+
+
+
+
+
+Well, that's about it. I guess there are alot of questions left so go ahead
+and ask me if there's something you wanna know.
+BTW, I don't take any responsibilities for faulty info in this doc :)
+(especially the formulas)
+
+Snail:
+------
+Patrik Oscarsson
+Hermansvagen 44
+S-554 53 Jonkoping
+Sweden
+
+Cyberspace:
+-----------
+da94ospa@hj.se
+
+Wire:
+--------
++46(0)36-711593 (I speak Swedish and English only)
+
+

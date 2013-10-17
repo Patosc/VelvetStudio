@@ -1,0 +1,94 @@
+
+
+		ÄÄÄÄÄ  Extreme's Tracker. X3M Format v1.1 ÄÄÄÄÄÄ
+
+	 >> MIDI support aren't included, but the format handles it. <<
+
+Offs   Byte(s)	Desc
+
+[Header]
+0	7	Header: "Extreme"
+7	2	Version of format (Hi = MainVer, Low = SubVer eg. 0100 = 1.0)
+9	1	cccsssss
+		c = Nr of Commands used in tune,
+		s = Nr of Sample channels-1 used in tune (0-31)
+10	1	Nr of Samples (0-255)
+11	2	Nr of Patterns (1-65535)
+13	2	Nr of Positions (1-65535)
+15	1	Nr of Virtual MIDI channels (0-64)*
+16	2	Nr of extra bytes
+	x	Virtual MIDI Channel Info.**
+	x	Extra bytes for future use.
+
+*  Channels may be duplicated so you can play several notes on the
+   same channel, this means that you can have more than 16 MIDI channels.
+   (Actually the same amount as the polyphony of the Synth.) Max 64.
+** The numbers represents REAL MIDI channels, the position VIRTUAL channels.
+   e.g: 0,1,2,2,3,4,5,6,7,7,7,8,9,9
+   That means that you use 10 real MIDI channels, but you play more that one
+   note one some. The size of the table is the same as Nr of MIDI Channels
+
+
+[Sample]
+	4	Length Of Sample
+	4	Repeat Start for sample
+	4	Repeat End for sample
+	1	Hi Nibble=PanPosition, Lo Nibble=FineTuneValue
+	2	SampleRate for C-2 (normally 8363Hz)
+	1	Volume (0-127) MIDI Compatible
+	1	Info Byte 76543210  If set to 1:
+			  ³³³³³³ÀÁÄ Packing Method
+			  ³ÀÁÁÁÁÄÄÄ Unused
+			  ÀÄÄÄÄÄÄÄÄ 16 bit sample
+
+ Data for rest of samples are exactly the same!
+
+[Names]
+	1	Length of ModName (max 30 bytes)
+	x	ModName
+	1	Length of SampName (max 30 bytes)
+	x	SampName(s)
+	1	Length of ChannelName (max 11 bytes)
+	x	ChannelName(s)
+	1	Length of PatternName (max 10 bytes)
+	x	PatternName(s)
+	2	Length of Description (max 65535 bytes)
+	x	Description of Module
+
+ The Number of SampleNames are equal to nr of Samples used
+ The Number of ChannelNames are equal to nr of Channels used
+ The Number of PatternNames are equal to nr of Patterns used
+
+[PatternOrder]
+	x	PatternNr. Holds number (0-65535) to tell the tracker what
+		pattern to play at that position
+
+[PatternData]
+	4	PatternSize (packed)
+	x	PatternData
+
+	eppppppp ssssssss rrcccccc [bbbbbbbb] [ugcccccc bbbbbbbb...]
+
+		Legend:
+		e      If 1, the low 7 bits are the following # of empty rows
+		p      Period. Note 12-108 (C-0 to B-7)
+		s      SampleNr (0-255)
+		r      0=No Command 1=1 command, 2=2 Commands
+		g      If g=1 then there's another command to read
+		c      Command-nr
+		b      Command-byte (same as an ordinary .MOD)
+		u      Unused
+
+	If e = 1, the low 7 bits contains the number of following empty rows
+	on the same channel. Therefore the patterns are packed channel by
+	channel and not row by row as in .MOD.
+
+	r contains up to 2 commands. Then you have to read next command to
+	see if there are even more commands to read.
+
+
+[Samples]
+	All samples stored after eachother, packed with a special packing
+	method not described here!
+
+

@@ -1,0 +1,2136 @@
+^c5      __   ____________/|  __    ___________________
+^c4     |  | /  _    ____/ | |  |  /  __  ____/__  ____\
+^c2     |  |/  / /  __/ |  | |  | /  / /  _/   /  /
+^c6     |  '  / /  /    |  | |  |/  / /  /    /  /
+^c6     |    / /  /__/\/   |_|_    / /  /___/\\  \__
+^c6     |___/ /________\_______/|_/ /_________\\____\
+^c6      ____________________ / | _____   _____  _____
+^c6     /  _______    ___   /|  ||     \  \___/ /  _  \
+^c6     \  \____  /  /  /  / |  ||  |\  \ |   |/  / \  \
+^c2      \___   \/  /  /  /  |  ||  | \  \|   |  /   \  \
+^c4  ________/  /\  \_ \  \__|  ||  |__\  \   |  \___/  /
+^c6                                                  viviD
+
+^c6---------------------------------------------------------
+                   ^c4### ^cfINTRODUCTION ^c4###
+^c6---------------------------------------------------------
+^c1
+  Welcome to Velvet Studio 2.0 help! Please be aware
+that this is intended more as an on-line help reference
+rather than full documentation for the program.
+
+  If you have any problems and wish to obtain human help,
+please see the Contact section in the Miscellaneous
+chapter.
+
+
+^lIndex:
+^c6---------------------------------------------------------
+                     ^c4### ^cfCONTENTS ^c4###
+^c6---------------------------------------------------------
+^c1
+  Click on any of the following topics for more
+information on them:
+
+^h[sw]|   * Shareware version
+^h[help]|   * Using help^c1
+^h[keyb]|   * Keyboard^c1
+^h[use]|   * Using the tracker^c1
+^h[pted]|   * Pattern editing^c1
+^h[inst]|   * Instruments^c1
+^h[cmdr]|   * Command reference^c1
+^h[musr]|   * Musical Reference^c1
+^h[misc]|   * Miscellaneous^c1
+
+
+
+^lsw:
+^c6---------------------------------------------------------
+                ^c4### ^cfShareware version ^c4###
+^c6---------------------------------------------------------
+^c1
+
+We've finally decided to release Velvet Studio PRO as
+shareware. Too many people complained over the high
+þprice, compared to other similar programs. I get your
+point exactly:
+You want people like us to work our asses off without
+getting anything from it. Next time, try to convince
+a car salesman to give away a Ferrari for free...
+
+ The price for a good moral is only $15!
+
+Send $15 in an envelope to:
+
+Velvet Development
+Att. D.Broman
+Hagafors
+560 13 Hook.
+
+Sweden only:
+Eller s„tt in 100 :- p† v†rt PostGiro 684514-3
+
+
+^lhelp:
+^c6---------------------------------------------------------
+                    ^c4### ^cfUSING HELP ^c4###
+^c6---------------------------------------------------------
+^c1
+  Velvet Studio's help system is a hypertext engine.
+You can click on various highlighted words on the screen
+which will refer you to another section of the helpfile
+which has more information on a topic.
+
+  The help facility has a search function which can be
+used to quickly search for text in the helpfile. To use
+it, click the LMB or RMB on the textfield next to the
+button, and type in the text you wish to search for.
+Click on the Search button to search for the text, and
+click on Search Again to repeat the search when some text
+is found.
+
+  The Back button is used to go back to the previous
+location when you've finished reading a certain help
+topic.
+
+  If you see a vertical pipe next to the a hypertext
+link, it means that the section has been updated since
+the last revision of the program.
+
+
+^lkeyb:
+^c6---------------------------------------------------------
+                     ^c4### ^cfKEYBOARD ^c4###
+^c6---------------------------------------------------------
+^c1
+  Keyboard commands are divided into the following:
+
+^h[keyb010]    * Browsing^c1
+^h[keyb020]    * Playing/recording^c1
+^h[keyb030]|   * Editing patterns^c1
+^h[keyb040]|   * Block functions^c1
+^h[keyb050]|   * Channel controls (muting/locking etc)^c1
+^h[keyb060]    * Transposing^c1
+^h[keyb070]    * Sample Selection^c1
+^h[keyb080]|   * Menus^c1
+^h[keyb090]|   * Miscellaneous^c1
+
+  Of course, these are the default Velvet Studio key
+mappings. You can change all the keyboard shortcuts
+through the Keyboard Setup option on the Config menu.
+
+^lkeyb010:
+                    ^ca-----------------
+                    ^c9# ^cfBrowsing song ^c9#
+                    ^ca-----------------
+^c1
+Shift ArrLeft   -       Decrease Current Position
+Shift ArrRight  -       Increase Current Position
+Ctrl  ArrLeft   -       Decrease Current Instrument
+Ctrl  ArrRight  -       Increase Current Instrument
+Alt   ArrLeft   -       Decrease Current Pattern
+Alt   ArrRight  -       Increase Current Pattern
+
+Shift Arrup     -       Fast Decrease row
+Shift ArrDn     -       Fast Increase row
+Ctrl  Arrup     -       Fastest Decrease row
+Ctrl  ArrDn     -       Fastest Increase row
+
+      Home      -       1:st press: Go to first row.
+                        2:nd press: Go to first channel
+
+       End      -       Go to last row
+
+      Arrows    -       Browse the patterndata
+
+      Tab       -       Next Channel
+Shift Tab       -       Prev Channel
+
+PGUP            -       Jump 8 notes Up
+PGDN            -       Jump 8 notes Down
+CTRL  PGUP      -       Jump 16 notes Up
+CTRL  PGDN      -       Jump 16 notes Down
+ALT   PGUP      -       Jump 32 notes Up
+ALT   PGDN      -       Jump 32 notes Down
+
+^lkeyb020:
+                 ^c9-----------------------
+                 ^ca# ^cfPlaying & Recording ^ca#
+                 ^c9-----------------------
+^c1
+      Enter     -       Play Current row, advance
+
+      Backspc   -       Play Current row, don't advance
+
+Right Ctrl      -       Play Mod
+Right Alt       -       Play Pattern
+Ctrl  Ctrl      -       Play Mod from current row
+Ctrl  Alt       -       Play Pattern from current row
+
+Right Shift     -       Record Pattern
+Shift Shift     -       Record Song
+Ctrl  Shift     -       Record Pattern from current row
+
+Alt   F6-F10    -       Play pattern from stored row
+Ctrl  F6-F10    -       Record pattern from stored row
+
+
+^lkeyb030:
+                   ^c9-------------------
+                   ^ca# ^cfPattern Editing ^ca#
+                   ^c9-------------------
+^c1
+      `         -       (The key to the left of "1")
+                        Insert a Note Off.
+
+Alt   K         -       Kill current sample at current
+                        channel
+Ctrl  K         -       Kill rest of channel
+Alt   O         -       Contract Pattern
+Ctrl  O         -       Contract Channel
+Alt   V         -       Expand Pattern
+Ctrl  V         -       Expand Channel
+
+Shift F3        -       Cut Channel to buffer
+Ctrl  F3        -       Cut Commands to buffer
+Alt   F3        -       Cut Pattern to buffer
+
+Shift F4        -       Copy Channel to buffer
+Ctrl  F4        -       Copy Commands to buffer
+Alt   F4        -       Copy Pattern to buffer
+
+Shift F5        -       Paste Channel-buffer to Channel
+Ctrl  F5        -       Paste Command-buffer to Channel
+Alt   F5        -       Paste Pattern-buffer to pattern
+
+      Del       -       Delete note under cursor
+Shift Del       -       Delete note+command under cursor
+Alt   Del       -       Delete command under cursor
+
+Shift Return/
+      Ins       -       Insert blank note at cursor-
+                        position and move the others
+                        down. Notes beyond pattern-
+                        position 63 will be lost!
+Shift Backsp/
+Shift Ins       -       Delete note above cursorposition
+                        and move the others up.
+                        You can not do this if you're at
+                        patternposition 0!
+
+Alt   Return    -       As above, but with pattern
+Alt   Backspace -       As above, but with pattern
+
+Ctrl  Return    -       Push cmds one down
+Ctrl  Backspace -       Drag cmds one up
+
+Shift 0-9       -       Store current command on selected
+                        key
+Alt   0-9       -       Insert all commands in current
+                        track
+Ctrl  0-9       -       Insert one command in current
+                        track
+
+Alt   ,         -       Copy all commands above cursor to
+                        current row.
+Alt   .         -       Copy all commands above cursor to
+                        current row
+                        and add one to the value.
+Alt   -         -       Copy all commands above cursor to
+                        current row
+                        and subract one from the value.
+
+Ctrl  ,         -       Copy command above cursor to
+                        current row
+Ctrl  .         -       Copy command above cursor to
+                        current row
+                        and add one to the value.
+Ctrl  -         -       Copy command above cursor to
+                        current row
+                        and subract one from the value.
+
+CAPS  .         -       Halve C4 Rate
+CAPS  ,         -       Double C4 Rate
+
+ALT   U         -       Undo. Exchanges Pattern with the
+                        stored Undo Buffer. This will
+                        NOT undo small changes in the
+                        pattern!
+ALT   B         -       Backup Pattern to Undo buffer
+
+^lkeyb040:
+                    ^c9-----------------
+                    ^ca# ^cfBlock Marking ^ca#
+                    ^c9-----------------
+^c1
+CAPS  Arrows,
+      PGUP,PGDN,
+      HOME,END  -       Mark a block (also with Mouse)
+Caps  F6-F10    -       Mark to stored row
+Ctrl  B         -       Mark Block Begin (PT compatible)
+Ctrl  C         -       Copy Marked Block
+Ctrl  D         -       Delete block, drag notes up
+Ctrl  F         -       Quick Mark a block.
+Ctrl  I         -       Insert block, push notes down
+Ctrl  J         -       Join-Paste Block (Mix)
+Ctrl  L         -       Quick Mark Channel/Pattern
+Ctrl  M         -       Interpolate command data at
+                        marked channels.
+Ctrl  P         -       Paste BlockBuffert To CursorPos
+Ctrl  U         -       Unmark Block
+Ctrl  Y         -       Change Inst in area to curr. Inst
+Ctrl  X         -       Cut Marked block
+
+^lkeyb050:
+                   ^c9--------------------
+                   ^ca# ^cfChannel Controls ^ca#
+                   ^c9--------------------
+^c1
+Ctrl  A         -       Mute/Lock/Unmute current channel
+Ctrl  Q         -       Unmute all channels
+Ctrl  S         -       Solo channel (Mute all except
+                        current channel)
+
+^lkeyb060:
+                     ^c9---------------
+                     ^ca# ^cfTransposing ^ca#
+                     ^c9---------------
+^c1
+ <CAPS LOCK> Plus keys below:
+
+   Sample/Track      | Sample/Pattern  | Sample/Block
+   ------------------+-----------------+-----------------
+   1 - Note Up       | 2 - Note Up     | 5 - Note Up
+   Q - Note Down     | W - Note Down   | T - Note Down
+   A - Octave Up     | S - Octave Up   | G - Octave Up
+   Z - Octave Down   | X - Octave Down | B - Octave Down
+                     |                 |
+   All/Track         | All/Pattern     | All/Block
+   ------------------+-----------------+-----------------
+   3 - Note Up       | 4 - Note Up     | 6 - Note Up
+   E - Note Down     | R - Note Down   | Y - Note Down
+   D - Octave Up     | F - Octave Up   | H - Octave Up
+   C - Octave Down   | V - Octave Down | N - Octave Down
+
+^lkeyb070:
+                  ^c9---------------------
+                  ^ca# ^cfSelecting Samples ^ca#
+                  ^c9---------------------
+^c1
+ On the numeric keyboard:
+
+          0 - Select Sample 0
+    1st row - Select Sample 1-4
+    2nd row - Select Sample 5-8
+    3rd row - Select Sample 9-C
+    4th row - Select Sample D-F
+
+Pressing a shift key simultaneous with above:
+         <CAPS LOCK> Sample 10-1F
+         <SHIFT>     Sample 20-2F
+         <CONTROL>   Sample 30-3F
+         <ALT>       Sample 40-4F
+
+^lkeyb080:
+                ^c9-------------------------
+                ^ca# ^cfMenus & Screen Blocks ^ca#
+                ^c9-------------------------
+^c1
+Alt   C         -       Config Screen.
+Alt   D         -       Disk Option.
+Alt   E         -       Description Editor.
+Alt   G         -       Toggle Piano
+Alt   H         -       Help popup
+Alt   I         -       Instrument Editor
+Alt   P         -       Position Editor.
+Alt   Q         -       Toggle Equalizers
+Alt   R         -       Restore to main screen
+Alt   S         -       Sample Editor.
+Alt   Z         -       Toggle Zoom pattern
+
+^lkeyb090:
+                  ^c9----------------------
+                  ^ca# ^cfMiscellaneous Keys ^ca#
+                  ^c9----------------------
+^c1
+Ctrl  E         -       Increase CommandNr on current
+                        channel
+Ctrl  W         -       Decrease CommandNr on current
+                        channel
+
+Shift+
+Ctrl  E         -       Increase CommandNr on every
+                        channel
+Shift+
+Ctrl  W         -       Decrease CommandNr on every
+                        channel
+
+Ctrl  T         -       Toggle Rowskip when using arrows.
+
+      F6-F10    -       Go to the stored row
+Shift F6-F10    -       Store current row on F-key
+Ctrl  R         -       Restore F6-F10 positions
+                        (0,16,32,48,63)
+
+Alt   N         -       Load next selected song.
+Alt   X         -       Exit the tracker
+
+      Space     -       Toggle edit. Stop all voices
+Shift Space     -       Invoke Pulldown menu at mousepos
+
+      Keypad Del-       Kill Instrument
+Shift Keypad Del-       Kill Sample
+
+
+      <         -       Increase RowSkip
+Shift <         -       Decrease RowSkip
+
+      Esc       -       Main PullDownMenu
+
+      F1        -       Decrease Octave
+      F2        -       Increase Octave
+
+
+^luse:
+^c6---------------------------------------------------------
+                ^c4### ^cfUSING THE TRACKER ^c4###
+^c6---------------------------------------------------------
+^c1
+  This section is divided into the following:
+
+^h[use010]|   * Using menus^c1
+^h[use020]    * Input fields^c1
+^h[use030]|   * Optimize module^c1
+^h[use040]|   * Disk options^c1
+^h[use050]|   * Configuration^c1
+
+^luse010:
+                     ^c9---------------
+                     ^ca# ^cfUsing Menus ^ca#
+                     ^c9---------------
+^c1
+  The tracker screen is divided up into various menu
+blocks, which can be changed by pressing the LMB on the
+menu button at the top left corner of a block. (The
+button with the fancy little lines drawn on it).
+
+  Pressing the RMB on a menu button will cycle through
+the screens available for that menu block, eg: If you
+press the button for the lower block (it's placed in the
+middle of the screen, near the left edge), you can choose
+between the Pattern editing screens, the Sample Editor,
+the Instrument Editor and so on.
+
+  You can also click at the very top of the screen, which
+activates the main pulldown menu. You can control all the
+menu blocks with the main pulldown, and you can also
+access the configuration menu through here.
+
+^luse020:
+                     ^c9----------------
+                     ^ca# ^cfInput Fields ^ca#
+                     ^c9----------------
+^c1
+  To edit an input field with text or digits, click on it
+with the RMB. (Note: With the exception of the instrument
+list, the pattern list and the position editor, you can
+also click the LMB on the field to edit it).
+
+  Pressing the LMB & RMB simultaneously will clear the
+string, or set the digits to zero if the field is
+numerical.
+
+  If the field has Up/Mod/Down buttons, you can also
+click on them to adjust the value. Pressing the Up button
+will increase the value, and pressing the Down button
+will decrease the value. The Mod button (the middle
+button, between Up/Down) will allow you to click & drag
+the mouse up and down, and adjusts the field value
+accordingly.
+
+^luse030:
+                       ^c9------------
+                       ^ca# ^cfOptimize ^ca#
+                       ^c9------------
+^c1
+  This function scans through the module for any unused
+rows, channels or commands in each pattern and reduces it
+to the minimum amount necessary, which saves memory and
+makes the module smaller on disk.
+
+  There are two different types of optimizing. Remove
+only removes unused command numbers at the end. Thus, it
+can't remove command number 2 if you use command numbers
+1 and 3 in a pattern. With respect to patterns, Remove
+will also only clear (zero out) the unused patterns, and
+not actually remove them from memory; for instruments,
+Remove will delete any non-blank instruments which are
+not used in the song.
+
+  Compress is more powerful, as it goes through the
+patterns and 'fills in the blanks' between command
+numbers; for example, if you have command numbers 1 and 3
+used, but 2 is unused, it will move command number 3 to
+number 2. With respect to patterns, Compress will remove
+them from memory, and Compress will also delete all blank
+instruments not used in the song and move the non-blank
+samples up to group them together.
+
+^luse040:
+                     ^c9----------------
+                     ^ca# ^cfDisk Options ^ca#
+                     ^c9----------------
+^c1
+  All disk options, such as saving and loading samples
+and songs, are done through the Disk Options screen. It
+is designed for power and flexibility, even though it is
+quite easy to use.
+
+  The filelisting box can have multiple files selected in
+it for the operations. Pressing the LMB on a file will
+select or deselect it, and pressing the RMB will either
+select or deselect all files in the current directory.
+You can select multiple files for the Rename and Delete
+functions, and also when loading instruments or samples.
+(Note that the order in which the files are loaded are
+dependent on the sort order of the filelisting).
+
+  The top of the Disk Options screen has the complete
+pathname of the file for the current operation. You can
+change the filename to load or save with this path.
+
+  You can load or save different types of files with this
+screen; the Song, Patt, Inst and Samp buttons will load
+modules, patterns/channels, instruments, and samples
+respectively.
+
+  Each of the file formats available also has its own
+default path. Pressing the LMB on the format will move to
+the default directory as well as changing the currently
+active file format, while pressing the RMB will not
+change the current directory. The Mixed button will
+display all the fileformats available, while the *.*
+button will list all files in the current directory.
+
+  The Name button will create a filename of a sample,
+instrument or module depending on the name of the thing
+itself. This can be automatically activated in Config
+Options.
+
+  If the Cnvrt button is active, then any loaded samples
+are automcatically converted from signed to unsigned, or
+unsigned to signed format. Velvet Studio uses unsigned
+(Amiga) samples.
+
+  If the Loop button is on, samples will be treated as
+Fast Tracker raw samples, and loop values will attempt to
+be loaded.
+
+  The Pack button indicates if your modules or samples
+should be compressed when they are saved. This should
+normally be on, and can be automatically activated in
+Config Options.
+
+  If Name is on, module, instrument or sample titles
+will be shown in the filelisting box in addition to the
+normal filename. If you have a large amount of files in
+each directory, it might be an idea to disable this since
+it takes time to scan the titles of all the files.
+
+  If Auto is on and several modules are selected, the
+program will load the next selected module as soon as
+the currently playing module ends.
+
+  The Rename button is used to rename files, and the
+Delete button will delete (with confirmation) the
+selected files. These buttons can be used with multiple
+files.
+
+  The Save button is used when you want to save a module,
+instrument or sample. Make sure that the name at the top
+of the Disk Option is correct to prevent disastrous
+mistakes.
+
+  Press the Load gadget to load a module that you have
+selected, or to load an instrument or sample to the
+current slot. If you are loading modules have have more
+than one file selected, the first one will be loaded into
+memory and will be deselected. You can use the Load Next
+Module keyboard command [Alt N] to load the next selected
+module in the filelisting.
+
+                   ^c6### ^ccFile Formats ^c6###
+^c1
+  Velvet Studio can manipulate the following file
+formats:
+(Those with a "*" can also be saved.)
+
+    Modules:
+
+  * .AMS - Advanced Module System (Velvet Studio).
+  * .MOD - ProTracker, FastTracker 6/8 channel, xxCH
+           module (ProTracker, FastTracker, TakeTracker,
+           FastTracker II).
+  * .S3M - ScreamTracker revision 3.0 module
+           (ScreamTracker III)
+    .STM - ScreamTracker module (ScreamTracker).
+  *  .XM - Extended Module (FastTracker 2, DigiTrekker).
+    .MTM - MultiTracker Module (Multitracker Module Ed.)
+    .ULT - Ultratracker Module
+
+    Instruments:
+
+  * .AIS - Advanced Instrument System (Velvet Studio).
+     .XI - Extended instrument (FastTracker 2).
+    .PAT - Gravis UltraSound patch (PatchMaker).
+
+    Samples:
+
+  * .ASE - Advanced Sample System (Velvet Studio).
+  * .SMP - Raw sample format (FastTracker, Velvet
+           Studio).
+    .S3I - ScreamTracker III instrument (ScreamTracker
+           III, Advanced DigiPlayer).
+    .IFF - AIFF sample (FastTracker 2).
+  * .WAV - Microsoft RIFF wave sample (CoolEdit).
+
+    Pattern data:
+
+  * .APS - Advanced Pattern System (Velvet Studio).
+  * .ACS - Advanced Clip System (Velvet Studio).
+    .XT  - Extended Track (Fast Tracker 2)
+
+^luse050:
+                        ^c9----------
+                        ^ca# ^cfConfig ^ca#
+                        ^c9----------
+^c1
+
+
+  The configuration pulldown contains everything you need
+to design the Tracker to become exactly what you want it
+to be.
+
+  SoundCard Setup
+
+  Here you can set up your soundcard if the autodetection
+(reading the environment variable) fails or if you want
+to change a certain value. For SB's you can also change
+the 16b/Stereo mixing options along eith the mixing
+frequency.
+
+  Options
+
+  A huge amount of options can be configured just to
+fit your own purposes. There is not enough time to comment
+them here, but select Options from the menu and you will
+be presented with a window where all options can be set.
+
+  Color Setup
+
+  You can also change the colors of the Tracker by
+selecting Colours. A window with a some dragbars
+appear, where you can change text color, bitmap intensity
+and so on, just to fit your own taste.
+
+  Key Map
+
+  The Key Map selection brings up yet another window,
+which is used for defining new keys. If you find that the
+standard keymap is totally out of order, you can define
+your own special keymap here. Every key on the keyboard
+can be reassigned, so that it will match the keymap you
+are used to.
+
+  Pattern Defaults
+
+  These are the default values for commands, channels
+and rows. These default values will be used when creating
+new patterns, so set them wisely to reduce the work you
+have to do when creating a song. For example, setting
+rows to 48 is a clever stroke if you're making a waltz
+tune.
+
+  Default Paths
+
+  This Popup lets you define the default paths of your
+songs and samples. Pressing the button to the left of
+the input slot will automatically insert the current
+path used in the diskoption.
+
+
+^lpted:
+^c6---------------------------------------------------------
+              ^c4### ^cfPATTERN EDIT FUNCTIONS ^c4###
+^c6---------------------------------------------------------
+^c1
+  Click on one of the following for more information:
+
+^h[pted010]|   * Channel locking^c1
+^h[pted020]    * Using multiple commands^c1
+^h[pted030]    * Song info^c1
+^h[pted040]    * Position editor^c1
+^h[pted050]|   * Pattern information^c1
+^h[pted060]    * Split keyboard feature^c1
+^h[pted070]|   * Echo editor^c1
+
+^lpted010:
+                   ^c9-------------------
+                   ^ca# ^cfChannel Locking ^ca#
+                   ^c9-------------------
+^c1
+  Locking a channel prevents it from being edited. It
+comes in useful if you want to make sure that you do not
+edit the channel by mistake, if you for example, play a
+chord on the keyboard.
+
+  You can lock a channel by pressing the Channel Control
+button, which is located just above the channel data.
+Pressing it once will display an M for MUTE, which mutes
+the channel; pressing it again will display an L, which
+indicates that the channel has been LOCKed.
+
+  Note: You can turn off channel locking if you prefer;
+see Config Options.
+
+^lpted020:
+                  ^c9---------------------
+                  ^ca# ^cfMultiple Commands ^ca#
+                  ^c9---------------------
+^c1
+  Unless you are in Zoom mode, the tracker will display
+one command for each channel; if you have more than 1
+command defined for the pattern, pressing the Command
+Number button (located just above the channel data) will
+cycle through them. Pressing the LMB on the button will
+increase the current command number, and pressing the RMB
+on the button will decrease the current command number.
+
+  If you wish to watch all commands on a single channel
+you can use the Zoom function (found in the pulldown
+menu in the lower menu block), and the tracker will
+switch to a mode where all commands are displayed.
+
+^lpted030:
+                      ^c9-------------
+                      ^ca# ^cfSong Info ^ca#
+                      ^c9-------------
+^c1
+  In the top left corner of the screen is the Song Info.
+It contains some short information of the tune.
+
+  You can modify the current pattern number, the current
+position or the song length, by changing the values of
+the respective fields.
+
+  Below the length field is the current BPM (beats per
+minute) timing of the song. The actual BPM button can
+also be clicked, and what it does depends on whether you
+are in editmode or not. Clicking on it when you are in
+editmode will insert the current BPM timing as a command
+at the CursorPos in the patterndata. Clicking on it when
+you are not in editmode will toggle BPM timing on or off.
+  The Song speed is located to the left of the BPM field.
+You can change the speed by pressing LMB or RMB ON the
+number. This had to be in this unstandard way, due to
+lack of space.
+
+^lpted040:
+                   ^c9-------------------
+                   ^ca# ^cfPosition Editor ^ca#
+                   ^c9-------------------
+^c1
+  To sequence your patterns, use the Position Editor
+which is located in the left menu block. Clicking on the
+pattern number for the position with the LMB will select
+that position for editing, and clicking on it with the
+RMB will change the pattern number for that position.
+
+  The INS button will insert a new pattern at the current
+position (and possibly copy the previous pattern number,
+depending on your Config Options). The DEL button will
+delete the current position.
+
+  The name of the current pattern is also shown below the
+position listing.
+
+^lpted050:
+                     ^c9----------------
+                     ^ca# ^cfPattern Info ^ca#
+                     ^c9----------------
+^c1
+  You can use the Pattern Info menu block to adjust the
+amount of rows, channels, or commands required for each
+pattern. Thanks to a total rewrite of the allocation
+routines, it is now possible to reduce the memory usage
+by not defining more data space than you exactly need.
+For example, the beginning of the song may use only three
+channels, but it will probably use more channels later on
+when they're needed. Use this menu block to change the
+amount of memory needed by each pattern.
+
+  You can also set the default amount of rows, channels
+and commands used by each pattern by Main Pulldown ->
+Configuration -> Default Pattern Values.
+
+
+^lpted060:
+                    ^c9------------------
+                    ^ca# ^cfSplit Keyboard ^ca#
+                    ^c9------------------
+^c1
+
+  The split keyboard is quite similar to the multisample,
+except instead of mapping samples to certain notes, it
+remaps instruments. For example, you can have two
+instrument zones mapped, one from C-0 to B-4 and one from
+C-5 to B-9. Pressing a note from C-0 to B-4 will play the
+instrumet mapped to that zone, and pressing a note from
+C-5 to B-9 will play a second, different instrument.
+
+  You can have up to 15 splits defined. The value in the
+Split field is the current split which you are working
+on.
+
+  The Zone field is the current splitzone you are working
+on; you can have up to 15 splitzones. Each splitzone has
+a single instrument assigned to it, and a Begin and End
+note. If you wish to set a zone from C-2 to B-2, set the
+Begin note to C-2 and the End note to B-2.
+
+  A splitzone also has a Base note reference, which is
+how much to transpose the notes played in that zone up or
+down by. For example, you may set a zone from C-2 to B-2,
+with a sample that sounds best from C-3 to B-3. By
+setting the base note to C-4 your instrument will be
+transposed to this note instead.
+
+  The Clr All button clears all splitzone settings, and
+the Active buttons activates the current split.
+
+^lpted070:
+                     ^c9---------------
+                     ^ca# ^cfEcho Editor ^ca#
+                     ^c9---------------
+^c1
+  The echo editor can be used to automatically produce
+echos and simulate reverb effects.
+
+  The From field is the channel which you wish to echo.
+It uses zero-based numbering, so to find out which is the
+channel number you wish to echo simply copy the channel
+number above the patterndata.
+
+  The To field represents the channel which will be used
+for the first echo. If you set this field to 2, the echo
+will be placed on channel 2 (zero-based).
+
+  The Chan # field is the number of channels to use for
+echoing. For example, if you set the To field to 2, and
+the Chan # to 3, the tracker will echo to channels 2, 3
+and 4.
+
+  The Delay field indicates how much to delay the first
+echo. The tracker will delay the initial echo by one row,
+plus the number in this field. The Decay percentage next
+to this field is how loud the delayed echo should be, as
+a percentage of the original volume. So if you set the
+delay to 5, and the decay to 67%, the tracker will set
+the initial echo to occur 6 rows later, at around 2/3 of
+the original volume.
+
+  The Rate field, along with the other decay field
+represents how fast you wish to make the echo fade out.
+This affects the initial echo and not the original
+volume; the decay field is the percentage of the last
+volume echoed, and the rate field is the number of rows
+plus one on which the echo will take place. So for
+example, if you have a rate of 1 and a decay of 33%, the
+tracker will "re-echo" every 2 rows, and that re-echo
+will have a third of the last echo's volume.
+
+  You can also save and restore echos which you've made
+by pressing the RMB on the digits to save the current
+echo settings in that slot, and pressing the LMB to
+restore them. The echos are saved in the config file.
+
+  If the Wrap button is depressed the echo engine will
+wrap the echo to the beginning of the pattern if it goes
+beyond the end of it.
+
+
+^linst:
+^c6---------------------------------------------------------
+                   ^c4### ^cfINSTRUMENTS ^c4###
+^c6---------------------------------------------------------
+^c1
+^h[inst010]|   * What are instruments?^c1
+^h[inst020]|   * Instrument editor^c1
+^h[inst030]|   * Shadow instruments^c1
+
+^linst010:
+                ^c9-------------------------
+                ^ca# ^cfWhat are instruments? ^ca#
+                ^c9-------------------------
+^c1
+  The concept of Instruments have been used in advanced
+synthesizers for years, and they now have been brought
+into trackers, for a much more powerful way to control
+your samples.
+
+  An instrument has volume, panning and vibrato envelopes
+which are applied to the samples automatically on
+playback. Each instrument can also consist of up to 16
+samples; depending on which note is played on the
+keyboard, a different sample can be played (musicians
+will know this as a multisample keyboard split).
+
+^linst020:
+                  ^c9---------------------
+                  ^ca# ^cfInstrument Editor ^ca#
+                  ^c9---------------------
+^c1
+                    ^c6### ^ccEnvelopes ^c6###
+^c1
+  An envelope changes the volume, panning or frequency of
+a sample on playback. For example, if you wish to have an
+instrument to have a fast attack but a very rapid decay,
+change the volume envelope to that the volume is at
+maximum initially, and declines very quickly to zero.
+
+  On the instrument editor screen, there are two boxes.
+The upper box represents the Volume envelope, and the
+lower box represents the Vibrato or Panning envelope
+(depending on which of the VIB or PAN buttons are
+depressed).
+
+  You can adjust the points on the envelopes by clicking
+and dragging them around in the envelope box. Dragging
+them with the LMB will only affect the current point,
+while dragging them with the RMB will drag the entire end
+of the envelope. This is useful if you have created an
+end of the envelope that you want to keep, but you want
+to change the beginning.
+
+  To add or delete a point, press the Up/Down buttons on
+the Points field respectively. Pressing Up will add a
+point at exactly halfway between the current point and
+the next point, and pressing Down will delete the current
+point.
+
+  The Value field is the current point's value (vertical
+offset). The Time field is the current point's time
+(horizontal offset). You can finetune each point value by
+selecting the point, and modifying the fields directly.
+
+  The Env Speed field is the speed at which the enveloped
+is scanned. A higher value will make the envelope to be
+scanned faster; a value of zero will cause the the
+current song BPM to be used instead, which will make the
+envelope song-speed dependent.
+
+  The top On button to the right of the envelope box
+toggles whether the envelope is active or not.
+
+  You can also sustain a point until a KeyOff is reached
+in the pattern; ie: the envelope will stop at a specified
+point and not advance any further until a KeyOff is
+encountered. To activate Sustain, select the point which
+the envelope should halt at in the Sustain field, and
+press the On button to make this active.
+
+  You can also specify a part of the envelope which
+should be looped; to do this, select the points of the
+envelope which represent the start and end of the loop,
+and press the On button next to the Start Loop field. If
+the B button located beneath the field is activated, the
+tracker will Break out of the loop when a KeyOff is
+encountered.
+
+  The type of curve which a point can produce to the next
+point can also be changed. The dafault curve is a line
+curve, but a positive and negative parabolic curve to the
+next point can also be used instead. Press the
+appropriate curve beneath the Curve button to change it.
+
+  There are pre-defined envelopes available for your use.
+Click on one of the Pre-defined buttons to choose them.
+
+  Often-used envelopes can be saved by pressing a
+Userdefined button with the RMB. Pressing the LMB on
+these buttons will recall the saved envelope. You can use
+these buttons to copy envelopes from one instrument to
+another.
+
+  The Scale buttons can be used to adjust compress or
+expand the envelope, both horizontally and vertically.
+It's hard to describe, so experiment with them to see how
+they work.
+
+  The FadeOut is used in conjunction with the normal
+volume envelope, to fade out a sound after a KeyOff is
+encountered. The value decides how many frames the fade
+will use until the sound is completely faded away.
+
+  Note: When experimenting with the envelope functions,
+try using a looped sample rather than a non-looped one.
+Envelope functions will of course work on non-looped
+samples as well, but it's easier to hear the effects on a
+looped sample.
+
+  Note: To enter a KeyOff in the pattern, press `, the
+tilde key (it's located to the left of the number 1 key
+on most keyboards).
+
+                   ^c6### ^ccMultisamples ^c6###
+^c1
+  A sample is usually only fairly good or accurate within
+a certain note range, eg: a sampled piano might only
+sound good between the notes C-4 and B-4. In the past,
+trackers used to have multiple samples of the same
+musical instrument, and had to switch between these
+samples and adjust their octaves accordingly since the
+samples were of different note ranges.
+
+  With the introduction of multisamples, several samples
+can be grouped into a single instrument, along with
+different base note references (among other values) for
+each sample. Depending on which note you play on the
+keyboard, a different sample will be selected to be
+played.
+
+  To map a sample to a note, simply click on the piano.
+If you have incremental selection turned on the Config
+Options, clicking on the piano with the LMB will increase
+the sample number for that note, and clicking on it with
+the RMB will decrease the sample number. If you are using
+sample-based selection, clicking on the piano will map
+the currently selected sample to that note.
+
+^linst030:
+                  ^c9----------------------
+                  ^ca# ^cfShadow Instruments ^ca#
+                  ^c9----------------------
+^c1
+           ^c6### ^ccWhat is a Shadow Instrument? ^c6###
+^c1
+  A shadow instrument is a copy of the original
+instrument and all of it's samples, which can have
+different instrument and sample values attached to it.
+For example, if you would have to like to have a
+different volume envelope on an instrument, simply shadow
+the instrument and modify the volume envelope on the
+shadow. The actual samples inside the instrument are
+totally unchanged, except that the instrument values
+(such as envelopes and multisample splits) and sample
+values (such as C4Rate, panning and loop points) are
+changed.
+
+  In other words, a shadow is like loading up two
+instruments which are exactly the same, but instead of
+taking up twice the memory used for the samples, it
+simply uses the original instrument's samples. This is
+extremely useful if you have limited sample memory, such
+as if you are restricted by a memory-based sound card.
+
+                 ^c6### ^ccCreating Shadows ^c6###
+^c1
+  Beneath the instrument box is a button labelled
+Shad. To create a shadow of an existing instrument, first
+select the instrument you wish to shadow, then click on
+the Shad button; the mouse pointer will have an S beside
+it. Then simply click on the destination instrument in
+the instrument box, ADDing an instrument space if
+necessary.
+
+           ^c6### ^ccShadows vs Real Instruments ^c6###
+^c1
+  You can treat shadows exactly as you do real
+instruments; use their instrument numbers in patterns
+normally, change sample loop point values, loop
+direction, tuning values, instrument envelopes, and so
+forth.
+
+  The only exception to this rule is that any
+modification to the actual sample data in the shadow
+instrument will update the original instrument sample
+data, and vice versa. So if you load a new sample into
+the place of a previous sample in the shadow instrument,
+the original instrument will have the new sample in the
+sample slot as well.
+
+  When you save a shadow instrument, Velvet Studio does
+save the sampledata with the sample file.
+
+
+^lcmdr:
+^c6---------------------------------------------------------
+                ^c4### ^cfCOMMAND REFERENCE ^c4###
+^c6---------------------------------------------------------
+^c1
+^h[cmdold]    * ProTracker commands^c1
+^h[cmdfine]|   * Finer ProTracker commands^c1
+^h[cmdnew]|   * New commands^c1
+
+^lcmdold:
+                 ^c9-----------------------
+                 ^ca# ^cfProTracker Commands ^ca#
+                 ^c9-----------------------
+^c1
+^h[cmd00xx]    * 00xy: Arpeggio^c1
+^h[cmd01xx]    * 01xx: Portamento up^c1
+^h[cmd02xx]    * 02xx: Portamento down^c1
+^h[cmd03xx]    * 03xx: Tone portamento^c1
+^h[cmd04xx]    * 04xy: Vibrato^c1
+^h[cmd05xx]    * 05xy: Portamento + volumeslide^c1
+^h[cmd06xx]    * 06xy: Vibrato + volumeslide^c1
+^h[cmd07xx]    * 07xy: Tremolo
+^h[cmd09xx]    * 09xx: Sampleoffset^c1
+^h[cmd0axx]    * 0Axy: Volumeslide^c1
+^h[cmd0bxx]    * 0Bxx: Jump position^c1
+^h[cmd0cxx]    * 0Cxx: Set volume^c1
+^h[cmd0dxx]    * 0Dxx: Break pattern^c1
+^c8      0Eyx: Extended commands^c1
+^h[cmd0e1x]        * 0E1x: Fineslide up^c1
+^h[cmd0e2x]        * 0E2x: Fineslide down^c1
+^h[cmd0e3x]        * 0E3x: Glissando control^c1
+^h[cmd0e4x]        * 0E4x: Set vibrato waveform^c1
+^h[cmd0e5x]        * 0E5x: Set finetune^c1
+^h[cmd0e6x]        * 0E6x: Patternloop^c1
+^h[cmd0e7x]        * 0E7x: Set tremolo waveform^c1
+^h[cmd0e9x]        * 0E9x: Retrigger^c1
+^h[cmd0eax]        * 0EAx: Fine volumeslide up^c1
+^h[cmd0ebx]        * 0EBx: Fine volumeslide down^c1
+^h[cmd0ecx]        * 0ECx: Note cut^c1
+^h[cmd0edx]        * 0EDx: Note delay^c1
+^h[cmd0eex]        * 0EEx: Pattern delay^c1
+^h[cmd0fxx]    * 0Fxx: Set speed^c1
+
+^lcmd00xx:
+                  ^c6### ^cc00xx: Arpeggio ^c6###
+^c1
+ Usage: $00 + 1st halfnote add + 2nd halfnote add
+        [halfnote add: $0-$F]
+
+ Arpeggio is used to simulate chords. This is done by
+ rapidly changing the pitch between 3(or 2) different
+ notes. It sounds very noisy and grainy on most samples,
+ but ok on monotone ones.
+
+ Example:
+
+ C-5 00 0047  C-major chord: (C+E+G  or C+4+7 halfnotes)
+ C-5 00 0037  C-minor chord: (C+D#+G or C+3+7 halfnotes)
+
+^lcmd01xx:
+               ^c6### ^cc01xx: Portamento up ^c6###
+^c1
+ Usage: $01 + portamento speed
+        [portamento speed: $00-$FF]
+
+ Portamento up will simply slide the sample pitch up.
+ You can NOT slide higher than B-3!
+
+ Example:
+
+ C-5 00 0103  1 is the command, 3 is the portamentospeed.
+
+ NOTE: The portamento will be called as many times as
+ the speed of the song. This means that you'll sometimes
+ have trouble sliding accuratly. If you change the speed
+ without changing the sliderates, it will sound bad...
+^lcmd02xx:
+              ^c6### ^cc02xx: Portamento down #^c6###
+^c1
+ Usage: $02 + portamento speed
+        [portamento speed: $00-$FF]
+
+ Just like command 1, except that this one slides the
+ pitch down instead. (Adds to the period).
+
+ You can NOT slide lower than C-1!
+
+ Example:
+
+ C-5 00 0203  2 is the command, 3 is the portamentospeed.
+^lcmd03xx:
+              ^c6### ^cc03xx: Tone-portamento ^c6###
+^c1
+ Usage: Dest-note + $03 + slidespeed
+        [slidespeed: $00-$FF]
+
+ This command will automatically slide from the old note
+ to the new. You don't have to worry about which
+ direction to slide, you need only set the slide speed.
+ To keep on sliding, just select the command $3 + 00.
+
+ Example:
+
+ A-2 00 0000  First play a note.
+ C-5 00 0305  C-5 is the note to slide to, 3 the command,
+              and 5 the speed.
+^lcmd04xx:
+                  ^c6### ^cc04xy: Vibrato ^c6###
+^c1
+ Usage: $04 + vibratorate + vibratodepth
+        [vibratorate:$0-$F, vibratodepth:$0-$F]
+
+ Example:
+
+ C-5 00 0481  4 is the command, 8 is the speed of the
+              vibrato, and 1 is the depth of the vibrato.
+
+ To keep on vibrating, just select the command $04 + 00.
+ To change the vibrato, you can alter the rate, depth
+ or both. Use command $0E4x to change the vibrato-waveform.
+^lcmd05xx:
+       ^c6### ^cc05xy: Tone-portamento + Volumeslide ^c6###
+^c1
+ Usage: $05 + upspeed + downspeed
+        [upspeed: $0-$F, downspeed: $0-$F]
+
+ This command will continue the current toneportamento
+ and slide the volume at the same time.
+
+ Example:
+
+ C-5 00 0503  3 is the speed to turn the volume down.
+ C-5 00 0540  4 is the speed to slide it up.
+^lcmd06xx:
+           ^c6### ^cc06xy: Vibrato + Volumeslide ^c6###
+^c1
+ Usage: $06 + upspeed + downspeed
+        [upspeed: $0-$F, downspeed: $0-$F]
+
+ This command will continue the current vibrato and slide
+ the volume at the same time.
+
+ Example:
+
+ C-5 00 0605  5 is the speed to turn the volume down.
+ C-5 00 0640  4 is the speed to slide it up.
+^lcmd07xx:
+                  ^c6### ^cc07xy: Tremolo ^c6###
+^c1
+ Usage: $07 + tremolorate + tremolodepth
+        [tremolorate: $0-$F, tremolodepth: $0-$F]
+
+ Tremolo vibrates the volume.
+
+ Example:
+
+ C-5 00 0794  7 is the command, 9 is the speed of the
+              tremolo, and 4 is the depth of the tremolo.
+
+ To keep on tremoling, just select the command $07 + 00.
+ To change the tremolo, you can alter the rate, depth
+ or both. Use command 0E7x to change the tremolo-waveform.
+^lcmd09xx:
+              ^c6### ^cc09xx: Set SampleOffset ^c6###
+^c1
+ Usage: $09 + offset
+        [offset: $00-$FF]
+
+ This command will play from a chosen position in the
+ sample, and not from the beginning. The two numbers
+ equal the two first numbers in the length of the
+ sample. Handy for speech samples.
+
+ Example:
+
+ C-5 00 0923  Play sample from offset $2300 (8960).
+^lcmd0axx:
+                ^c6### ^cc0Axy: Volumeslide ^c6###
+^c1
+ Usage: $0A + upspeed + downspeed
+        [upspeed: $0-$F, downspeed: $0-$F]
+
+ Example:
+
+ C-5 00 0A05  5 is the speed to turn the volume down.
+ C-5 00 0A40  4 is the speed to slide it up.
+
+ NOTE: The slide will be called as many times as the
+ speed of the song. The slower the song, the more the
+ volume will be changed on each note.
+^lcmd0bxx:
+               ^c6### ^cc0Bxx: Position-jump ^c6###
+^c1
+ Usage: $B + position
+        [position: $00-$7F]
+
+ This command will stop playback of the current position
+ after the current row and will jump to the specified
+ position number.
+
+ Example:
+
+ C-5 00 0B01  B is the command, 1 is the position to
+              restart the song at.
+
+ This command will also perform a pattern-break
+ (see below).
+^lcmd0cxx:
+                 ^c6### ^cc0Cxx: Set volume ^c6###
+^c1
+ Usage: $0C + volume
+        [volume: $00-$7F]
+
+ Well, this old familiar command will set the current
+ volume to your own selected. The highest volume is $7F.
+ All volumes are represented in hex.
+
+ Example:
+
+ C-5 00 0C10  C is the command, 10 is the volume
+              (16 decimal).
+^lcmd0dxx:
+               ^c6### ^cc0Dxx: Pattern-break ^c6###
+^c1
+ Usage: $0D + pattern-position
+        [pattern-position: 00-64]
+
+ This command just jumps to the next song-position, and
+ continues play from the patternposition you specify.
+ Note that this uses decimal values and not hexadecimal
+ values, unlike most other commands.
+
+ Example:
+
+ C-5 00 0D32  Jump to the next song-position and continue
+              play from patternposition 32.
+^lcmd0e1x:
+                ^c6### ^cc0E1x: Fineslide up ^c6###
+^c1
+ Usage: $0E1 + value
+        [value: $0-$F]
+
+ This command works just like the normal portamento up,
+ except that it only slides up once. It does not
+ continue sliding during the length of the note.
+
+ Example:
+
+ C-5 00 0E11  Slide up 1 at the beginning of the note.
+^lcmd0e2x:
+               ^c6### ^cc0E2x: Fineslide down ^c6###
+^c1
+ Usage: $0E2 + value
+        [value: $0-$F]
+
+ This command works just like the normal portamento down,
+ except that it only slides down once. It does not
+ continue sliding during the length of the note.
+
+ Example:
+
+ C-5 00 0E26  Slide up 6 at the beginning of the note.
+^lcmd0e3x:
+             ^c6### ^cc0E3x: Glissando Control ^c6###
+^c1
+ Usage: $0E3 + status
+        [status: $0-$1]
+
+ Glissando must be used with the tone-portamento command.
+ When glissando is activated, toneportamento will slide
+ a halfnote at a time, instead of a straight slide.
+
+ Example:
+
+ C-5 00 0E31  Turn Glissando on.
+ C-5 00 0E30  Turn Glissando off.
+^lcmd0e4x:
+            ^c6### ^cc0E4x: Set vibrato waveform ^c6###
+^c1
+ Usage: $0E4 + wavetype
+        [wavetype: $0-$6]
+
+ Example:
+
+ C-5 00 0E40  Set sine(default)
+        0E44  Don't retrig WaveForm
+ C-5 00 0E41  Set Ramp Down
+        0E45  Don't retrig WaveForm
+ C-5 00 0E42  Set Squarewave
+        0E46  Don't retrig WaveForm
+^lcmd0e5x:
+                ^c6### ^cc0E5x: Set finetune ^c6###
+^c1
+ Usage: $0E5 + finetune-value
+        [finevalue: $0-$F]
+
+ Example:
+
+ C-5 00 0E51  Set finetune to 1.
+
+ Use these tables to figure out the finetune-value.
+
+ Finetune: +7 +6 +5 +4 +3 +2 +1  0
+    Value:  7  6  5  4  3  2  1  0
+
+ Finetune: -1 -2 -3 -4 -5 -6 -7 -8
+    Value:  F  E  D  C  B  A  9  8
+^lcmd0e6x:
+                ^c6### ^cc0E6x: PatternLoop ^c6###
+^c1
+ Usage: $0E6 + loopnumber
+        [loopnumber: $0-$F]
+
+ This command will loop a part of a pattern.
+
+ Example:
+
+ C-5 00 0E60  Set loopstart.
+ C-5 00 0E63  Jump to loop 3 times before playing on.
+^lcmd0e7x:
+            ^c6### ^cc0E7x: Set tremolo waveform ^c6###
+^c1
+ Usage: $0E7 + wavetype
+        [wavetype: $0-$2]
+
+ Example:
+
+ C-5 00 0E70  Set sine (default)
+ C-5 00 0E71  Set Ramp Down
+ C-5 00 0E72  Set Squarewave
+^lcmd0e9x:
+                ^c6### ^cc0E9x: Retrig note ^c6###
+^c1
+ Usage: $0E9 + tick
+        [tick: $0-$F]
+
+ This command will retrig the same note before playing
+ the next. Where to retrig depends on the speed of the
+ song. If you retrig with 1 in speed 6 that note will be
+ trigged 6 times in one note slot. Retrig on hi-hats!
+
+ Example:
+
+ C-5 00 0F06  Set speed to 6.
+ C-5 00 0E93  Retrig at tick 3 out of 6.
+^lcmd0eax:
+                ^c6### ^cc0EAx: Fine volumeslide up ^c6###
+^c1
+ Usage: $0EA + value
+        [value: $0-$F]
+
+ This command works just like the normal volumeslide up,
+ except that it only slides up once. It does not continue
+ sliding during the length of the note.
+
+ Example:
+
+ C-5 00 0EA3  Slide volume up 1 at the beginning of the
+              note.
+^lcmd0ebx:
+           ^c6### ^cc0EBx: Fine volumeslide down ^c6###
+^c1
+ Usage: $0EB + value
+        [value: $0-$F]
+
+ This command works just like the normal volumeslide
+ down, except that it only slides down once. It does
+ not continue sliding during the length of the note.
+
+ Example:
+
+ C-5 00 0EB6  Slide volume down 6 at the beginning of the
+              note.
+^lcmd0ecx:
+                  ^c6### ^cc0ECx: Cut note ^c6###
+^c1
+ Usage: $0EC + tick
+        [tick: $0-$F]
+
+ This command will cut the note at the selected tick, creating
+ extremely short notes.
+
+ Example:
+
+ C-5 00 0F06  Set speed to 6.
+ C-5 00 0EC3  Cut at tick 3 out of 6.
+
+ Note that the note is not really cut, the volume is
+ just turned down.
+^lcmd0edx:
+                 ^c6### ^cc0EDx: Delay note ^c6###
+^c1
+ Usage: $0ED + tick
+        [tick: $0-$F]
+
+ This command will delay the note to the selected tick.
+
+ Example:
+
+ C-5 00 0F06  Set speed to 6.
+ C-5 00 0ED3  Play note at tick 3 out of 6.
+
+ You can play the same note on two channels, delay one,
+ and get a nice flanging effect.
+^lcmd0eex:
+               ^c6### ^cc0EEx: Pattern Delay ^c6###
+^c1
+ Usage: $0EE + notes
+        [note: $0-$F]
+
+ This command will delay the pattern the selected numbers
+ of notes.
+
+ Example:
+
+ C-5 00 0EE8  Delay pattern 8 notes before playing on.
+
+ All other effects are still active when the pattern is
+ being delayed.
+^lcmd0fxx:
+                 ^c6### ^cc0Fxx: Set speed ^c6###
+^c1
+ Usage: $0F + songspeed
+        [songspeed: $00-$FF]
+
+ This command will set the speed of the song.
+
+        Range 00    - Stop song.
+        Range 01-FF - Set speed
+        Range 20-FF - Set BPM speeds,
+                      range 32-255.
+
+^lcmdnew:
+                     ^c9----------------
+                     ^ca# ^cfNew Commands ^ca#
+                     ^c9----------------
+^c1
+^h[cmd08xx]    * 08xx: Set panposition^c1
+^h[cmd0e80]    * 0E80: Break sampleloop^c1
+^h[cmd10xx]    * 10xx: Direction control^c1
+^h[cmd13xx]    * 13xy: Retrigger w/volume slide^c1
+^h[cmd1cxx]|   * 1Cxx: Channel mastervolume^c1
+^h[cmd1dxx]|   * 1Dxx: Long pattern break^c1
+^h[cmd1f0x]|   * 1F0x: Set decimal BPM value^c1
+^h[cmd18xx]|   * 18xy: Slide panposition^c1
+^h[cmd20xx]|   * 20xx: Keyoff at tick^c1
+|   * 23xx: Volume Envelope Jump
+|   * 24xx: Panning Envelope Jump
+|   * 25xx: Vibrato Envelope Jump
+^h[cmd2cxx]|   * 2Cxx: Global volume^c1
+^h[cmd2axx]|   * 2Axy: Global volumeslide^c1
+^lcmd08xx:
+              ^c6### ^cc08xx: Set PanPosition ^c6###
+^c1
+ Usage: $08 + panpot
+
+ This command will set the current channel pan position.
+
+ Example:
+
+ C-5 00 0805  Set the panpot to -3.
+
+ Use this table to work out the value from the panpot.
+
+ Panpot: -8 -7 -6 -5 -4 -3 -2 -1  0 +1 +2 +3 +4 +5 +6 +7
+  Value:  0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F
+^lcmd0e80:
+              ^c6### ^cc0E80: Break SampleLoop ^c6###
+^c1
+ Usage: $0E80
+
+ This command will set the volume to 00 if the sample has
+ reached the end loop-point at least once.
+^lcmd10xx:
+         ^c6### ^cc10xx: Sample Directional Control ^c6###
+^c1
+ Usage: $10 + value [value: $00-$02]
+
+ This command controls which direction the sample is
+ played in, as well as the types of loops the sample can
+ have (bidirectional or unidirectional).
+
+    Value 00 - Play sample forwards
+          01 - Play sample backwards
+          02 - Play w/bidirectional loop (only for
+               looped samples)
+
+ Example:
+
+ C-5 00 1001  Play sample backwards.
+^lcmd13xx:
+        ^c6### ^cc13xy: Retrigger with Volume Slide ^c6###
+^c1
+ Usage: $13 + volumeslide_value + tick
+        [volumeslide_value: $0-$F]
+        [tick: $0-$F]
+
+ This command is very similar to the $0E9x command,
+ except that it allows volume slides between the retrigs.
+
+ Example:
+
+ C-5 00 1343  Retrig note every 3 ticks with -4 volume
+              between each retrig.
+
+ Use this table to work out the volumeslide value.
+
+      0: 0    (No volslide)    8: 0 (No volslide)
+      1: -1                    9: +1
+      2: -2                    A: +2
+      3: -4                    B: +4
+      4: -8                    C: +8
+      5: -16                   D: +16
+      6: 2/3 * the orig. vol.  E: 3/2 * the orig vol
+      7: 1/2 * the orig. vol.  F: 2 * the orig.vol.
+^lcmd1cxx:
+          ^c6### ^cc1Cxx: Set Channel Mastervolume ^c6###
+^c1
+ Usage: $1C + new channel volume
+        [new channel volume: $00-$7F]
+
+ This command will set the current channel volume, where
+ $7F (127) is the default and maximum volume.
+
+ Example:
+
+ C-5 00 1C20  Set channel volume to $20 (32).
+ C-5 00 0C40  Play sample with volume of $40 (64), but
+              since channel vol is set to $20, the real
+              volume is (32/127) * 64 = 16.
+^lcmd1dxx:
+             ^c6### ^cc1Dxx: Long Patternbreak ^c6###
+^c1
+ Usage: $1D + pattern-position
+        [pattern-position: $00-$FF]
+
+ This command just jumps to the next song-position, and
+ continues play from the patternposition you specify.
+ Note that it is very similar to the 0Dxx command, except
+ that it uses hexadecimal values so that patterns over 64
+ rows long can be accommodated.
+
+ Example:
+
+ C-5 00 1D80  Jump to the next song-position and continue
+              play from patternposition $80 (128).
+^lcmd1f0x:
+           ^c6### ^cc1F0x: Set BPM Decimal Value ^c6###
+^c1
+ Usage: $1F0 + bpm_value
+        [bpm_value: $0-$9]
+
+ This command sets the 1/10th fine BPM value (the value
+ after the decimal point).
+
+ Example:
+
+ C-5 00 0F82  Sets the tempo to 128 BPM.
+ C-5 00 1F07  Sets the tempo to 128.7 BPM.
+^lcmd18xx:
+             ^c6### ^cc18xy: Slide Panposition ^c6###
+^c1
+ Usage: $18 + left_speed + right_speed
+        [left_speed: $0 - $F]
+        [right_speed: $0 - $F]
+
+ This command will slide the current channel panning
+ position to either the left or the right.
+
+ Example:
+
+ C-5 00 1805  Slides the panpot to the right by 5.
+
+ NOTE: The slide will be called as many times as the
+ speed of the song. The slower the song, the more the
+ panpot will be changed on each note.
+^lcmd20xx:
+               ^c6### ^cc20xx: KeyOff at Tick ^c6###
+^c1
+ Usage: $20 + tick
+        [tick: $00-$FF]
+
+ This command will send a KeyOff event on a certain tick.
+
+ Example:
+
+ C-5 00 2003  Sends a KeyOff signal at tick 3.
+^lcmd2cxx:
+             ^c6### ^cc2Cxx: Set Global Volume ^c6###
+^c1
+ Usage: $2C + global volume
+        [global volume: $00-$7F]
+
+ This command will set the current global volume, where
+ $7F (127) is the default and maximum volume.
+
+ Example:
+
+ C-5 00 2C20  Set global volume to $20 (32).
+ C-5 00 0C40  Play sample with volume of $40 (64), but
+              since global vol is set to $20, the real
+              volume is (32/127) * 64 = 16.
+^lcmd2axx:
+             ^c6### ^cc2Axy: Global Volumeslide ^c6###
+^c1
+ Usage: $2A + upspeed + downspeed
+        [upspeed: $0-$F]
+        [downspeed: $0-$F]
+
+ Example:
+
+ C-5 00 2A05  Slides the global volume down at speed 5.
+ C-5 00 2A40  4 is the speed to slide the global vol up.
+
+ NOTE: The slide will be called as many times as the
+ speed of the song. The slower the song, the more the
+ volume will be changed on each note.
+
+^lcmdfine:
+              ^c9-----------------------------
+              ^ca# ^cfFiner ProTracker Commands ^ca#
+              ^c9-----------------------------
+^c1
+11 xx   Extra Fine Slide Up (4 times finer than normal)
+12 xx   Extra Fine Slide Down (4times finer than normal)
+15 xx   Just Like 5, but with 2 times finer volslide.
+16 xx   Just Like 6, but with 2 times finer volslide.
+1A xx   2 times finer volslide than A.
+1E 1x   Just like E1, but this uses all octaves.
+1E 2x   Just like E2, but this uses all octaves.
+1E Ax   2 times Finer volslide than EA.
+1E Bx   2 times Finer volslide than EB.
+21 xx   Just like 1, but this uses all octaves.
+22 xx   Just like 2, but this uses all octaves.
+
+  Note that this section will of course be updated in the
+future, but I'm so tired right now (I've been working on
+this helpfile for almost 4 hours straight) that I can't
+be bothered to retype this section..
+
+^lmusr:
+^c6---------------------------------------------------------
+                ^c4### ^cfMUSICAL REFERENCE ^c4###
+^c6---------------------------------------------------------
+^c1
+  The Modal and Chord Theory sections are taken from
+TraxWeekly #1, and have been reprinted here with
+permission from Leviathan.
+
+^h[musr010]|   * Modal Theory^c1
+^h[musr020]|   * Chord Theory^c1
+
+^lmusr010:
+                     ^c9----------------
+                     ^ca# ^cfModal Theory ^ca#
+                     ^c9----------------
+
+^c6+----------------------------------+ ^c1
+^c6| ^c51  ^c6| ^c52  ^c6| ^c53  ^c6| ^c54  ^c6| ^c55  ^c6| ^c56  ^c6| ^c57  ^c6| ^c1
+^c6|----+----+----+----+----+----+----| ^c1Major Modes:
+^c6| ^ccC  ^c6| ^ccD  ^c6| ^ccE  ^c6| ^ccF  ^c6| ^ccG  ^c6| ^ccA  ^c6| ^ccB  ^c6| ^c1Ionian: No change
+^c6| ^ccC# ^c6| ^ccD# ^c6| ^ccF  ^c6| ^ccF# ^c6| ^ccG# ^c6| ^ccA# ^c6| ^ccC  ^c6| ^c1Lydian: 5b
+^c6| ^ccD  ^c6| ^ccE  ^c6| ^ccF# ^c6| ^ccG  ^c6| ^ccA  ^c6| ^ccB  ^c6| ^ccC# ^c6| ^c1Mixolydian: 7b
+^c6| ^ccD# ^c6| ^ccF  ^c6| ^ccG  ^c6| ^ccG# ^c6| ^ccA# ^c6| ^ccC  ^c6| ^ccD  ^c6| ^c1
+^c6| ^ccE  ^c6| ^ccF# ^c6| ^ccG# ^c6| ^ccA  ^c6| ^ccB  ^c6| ^ccC# ^c6| ^ccD# ^c6| ^c1Minor Modes:
+^c6| ^ccF  ^c6| ^ccG  ^c6| ^ccA  ^c6| ^ccA# ^c6| ^ccC  ^c6| ^ccD  ^c6| ^ccE  ^c6| ^c1Dorian: 3b,7b
+^c6| ^ccF# ^c6| ^ccG# ^c6| ^ccA# ^c6| ^ccB  ^c6| ^ccC# ^c6| ^ccD# ^c6| ^ccF  ^c6| ^c1Phyrgian: 2,3,6,7b
+^c6| ^ccG  ^c6| ^ccA  ^c6| ^ccB  ^c6| ^ccC  ^c6| ^ccD  ^c6| ^ccE  ^c6| ^ccF# ^c6| ^c1Aeolian: 3,6,7b
+^c6| ^ccG# ^c6| ^ccA# ^c6| ^ccC  ^c6| ^ccC# ^c6| ^ccD# ^c6| ^ccF  ^c6| ^ccG  ^c6| ^c1
+^c6| ^ccA  ^c6| ^ccB  ^c6| ^ccC# ^c6| ^ccD  ^c6| ^ccE  ^c6| ^ccF# ^c6| ^ccG# ^c6| ^c1Diminished Mode:
+^c6| ^ccA# ^c6| ^ccC  ^c6| ^ccD  ^c6| ^ccD# ^c6| ^ccF  ^c6| ^ccG  ^c6| ^ccA  ^c6| ^c1Locrian: 2,3,5,6,7b
+^c6| ^ccB  ^c6| ^ccC# ^c6| ^ccD# ^c6| ^ccE  ^c6| ^ccF# ^c6| ^ccG# ^c6| ^ccA# ^c6| ^c1
+^c6+----------------------------------+
+^c1
+  Basically, all of the scales listed at top are the
+Ionian, or standard mode. These are the scales you
+usually learn first. Below that are the other modes,
+listed by category. They show changes you need to make to
+the scales listed at the top to get the other modes. For
+example, Dorian is shown as 3b,7b. To get C dorian, take
+C D E F G A B (from the top) and flatten the 3rd and 7th
+notes, to get C D D# F G A A#.
+
+  You may ask, "What's the point? How can I use modes?"
+Well, if you makes all the chords in a chord progression
+in the same mode (that is, all of the notes of all the
+chords stick to one scale) then it sounds much better,
+and writing leads is easier since you only have to use
+notes from the mode to make it fit. A well-planned chord
+progression that fits a mode eliminates the "trial and
+error" style lead writing that a lot of us need to do
+when we have an odd chord progression.
+
+^lmusr020:
+                     ^c9----------------
+                     ^ca# ^cfChord Theory ^ca#
+                     ^c9----------------
+
+^c6+----------------------------------+ ^c1
+^c6| ^c51  ^c6| ^c52  ^c6| ^c53  ^c6| ^c54  ^c6| ^c55  ^c6| ^c56  ^c6| ^c57  ^c6| ^c1
+^c6|----+----+----+----+----+----+----| ^c1
+^c6| ^ccC  ^c6| ^ccD  ^c6| ^ccE  ^c6| ^ccF  ^c6| ^ccG  ^c6| ^ccA  ^c6| ^ccB  ^c6| ^c1Major: 1,3,5
+^c6| ^ccC# ^c6| ^ccD# ^c6| ^ccF  ^c6| ^ccF# ^c6| ^ccG# ^c6| ^ccA# ^c6| ^ccC  ^c6| ^c1Minor: 1,3b,5
+^c6| ^ccD  ^c6| ^ccE  ^c6| ^ccF# ^c6| ^ccG  ^c6| ^ccA  ^c6| ^ccB  ^c6| ^ccC# ^c6| ^c1Add2: 1,2,3,5
+^c6| ^ccD# ^c6| ^ccF  ^c6| ^ccG  ^c6| ^ccG# ^c6| ^ccA# ^c6| ^ccC  ^c6| ^ccD  ^c6| ^c1
+^c6| ^ccE  ^c6| ^ccF# ^c6| ^ccG# ^c6| ^ccA  ^c6| ^ccB  ^c6| ^ccC# ^c6| ^ccD# ^c6| ^c1Sus2: 1,2,5
+^c6| ^ccF  ^c6| ^ccG  ^c6| ^ccA  ^c6| ^ccA# ^c6| ^ccC  ^c6| ^ccD  ^c6| ^ccE  ^c6| ^c1Sus4: 1,4,5
+^c6| ^ccF# ^c6| ^ccG# ^c6| ^ccA# ^c6| ^ccB  ^c6| ^ccC# ^c6| ^ccD# ^c6| ^ccF  ^c6| ^c1Fifth: 1,5
+^c6| ^ccG  ^c6| ^ccA  ^c6| ^ccB  ^c6| ^ccC  ^c6| ^ccD  ^c6| ^ccE  ^c6| ^ccF# ^c6| ^c1
+^c6| ^ccG# ^c6| ^ccA# ^c6| ^ccC  ^c6| ^ccC# ^c6| ^ccD# ^c6| ^ccF  ^c6| ^ccG  ^c6| ^c1Minor7th: 1,3b,5,7b
+^c6| ^ccA  ^c6| ^ccB  ^c6| ^ccC# ^c6| ^ccD  ^c6| ^ccE  ^c6| ^ccF# ^c6| ^ccG# ^c6| ^c1Major7th: 1,3,5,7
+^c6| ^ccA# ^c6| ^ccC  ^c6| ^ccD  ^c6| ^ccD# ^c6| ^ccF  ^c6| ^ccG  ^c6| ^ccA  ^c6| ^c1Diminished: 1,3b,5b
+^c6| ^ccB  ^c6| ^ccC# ^c6| ^ccD# ^c6| ^ccE  ^c6| ^ccF# ^c6| ^ccG# ^c6| ^ccA# ^c6| ^c1
+^c6+----------------------------------+
+^c1
+  For example, to get a Cminor7th, you take the 1st,
+flatted 3rd, fifth, and flatted 7th note from C D E F G A
+B, or C D# G A#.
+
+  Experiment with the chords and get to know their sound.
+Each chord has a different tone and feel to it, and can
+be used to give a song different emotions.
+
+
+^lmisc:
+^c6---------------------------------------------------------
+             ^c4### ^cfMISCELLANOUS INFORMATION ^c4###
+^c6---------------------------------------------------------
+^c1
+^h[misc010]|   * Trivia^c1
+^h[misc020]|   * Troubleshooting^c1
+^h[misc030]|   * Known bugs^c1
+^h[misc040]    * Hints^c1
+^h[misc050]|   * Future of the tracker^c1
+^h[misc060]|   * Velvet Development news^c1
+^h[misc070]|   * Contact/help^c1
+^h[misc080]|   * Credits^c1
+^h[misc090]|   * Closing words^c1
+^h[misc100]|   * Acknowledgements^c1
+
+^lmisc010:
+                        ^c9----------
+                        ^ca# ^cfTrivia ^ca#
+                        ^c9----------
+^c1
+ * This tracker is coded in 100% assembly and it runs
+   under Pmode/w. It contains over 100,000 lines and
+   about 2.0MB of source code.
+
+ * We started to develop it in January 1994.
+
+^lmisc020:
+                   ^c9--------------------
+                   ^ca# ^cfTrouble Shooting ^ca#
+                   ^c9--------------------
+^c1
+Problem:
+        The tracker just hangs after the program is
+        loaded.
+Solution:
+      * There might be some error in the environment
+        variable. Change/Remove that line in
+        AUTOEXEC.BAT and try again. (you should now
+        get a setup instead).
+
+
+Problem:
+        You get FATAL IRQ messages when loading/saving a
+        tune.
+Solution:
+      * Change IRQ and/or DMA channel in the config
+      * Disable DMA transfer in the config.
+        (IRQ errors may disappear if you restart the
+        tracker...)
+        NOTE: If this happens when you are about to
+        save the song, get into the soundcard setup
+        and disable the PlayDMA, and press CANCEL.
+        This is a special feature only made for this
+        reason.
+
+Problem:
+        The graphics looks weird somewhere in the
+        tracker, or the update is very slow.
+Solution:
+      * Unload all TSR programs that may affect the
+        graphics (try a clean boot)
+      * Buy a faster Graphics card (if update is slow)
+      * Test another mousedriver.
+      * If it still doesn't look good, contact the
+        programmers!
+
+
+Problem:
+        The tracker won't work or behaves very unstable
+        under DPMI.
+Solution:
+      * There may be weird problems under some DPMIs.
+        Many DPMI drivers out there are anywhere from a
+        little to extremely buggy.  If you suspect your
+        DPMI driver, try running without it, or under a
+        different DPMI driver.
+
+Problem:
+        The QEMM's Stealth function doesn't seem to work
+        with the tracker.
+Solution:
+      * Remove the Stealth feature, or run another Memory
+        manager.
+
+Problem:
+        When using MIDI styled keyboard in the tracker,
+        I can't press as many keys simultaneous that
+        I want.
+Solution:
+      * All keyboards doesn't support multiple
+        keypresses, so buy a new keyboard or don't
+        use multiple keypresses.
+
+Problem:
+        I've made a tune in a previous version of the
+        tracker, and when playing it in this version
+        it sounds wrong.
+Solution:
+      * There was a bug in all prior versions of the
+        tracker that now is corrected. The bug only
+        appear if you have changed the C4Rate (former
+        C2Rate) and are using slides and/or vibrato.
+        You have to change the song so that it sounds
+        correct. Sorry for this inconvenience.
+
+
+If something else fails, try to remove the configfile and
+run again!
+
+If you still have problems, contact Velvet Development!
+
+^lmisc030:
+                      ^c9--------------
+                      ^ca# ^cfKnown Bugs ^ca#
+                      ^c9--------------
+^c1
+
+ * If you have an Apricot Xen-PCm you might have
+   problems with the mouse. Any ideas why?
+
+ * If you encounter that the Echo Editor gives garbage
+   results sometimes, increase the number of commands
+   on the specific pattern by one. The autoresize
+   function is a bit buggy.
+
+ * The MIDI implementation is missing due to some bugs,
+   We might add support for it later.
+
+ * The DOS Shell function works well on most computers,
+   but on some it freezes the computer. No solution yet.
+
+ * The CD-ROM routines might be a bit buggy on some
+   computers. I've discovered that SCSI CD-ROMS may hang
+   the computer if accessed. The EJECT button in the
+   sample editor don't work very well.
+
+ * Using Microsoft Mouse Driver might not work on some
+   computers. Please try another mouse driver. We've got
+   no solution to this problem.
+
+
+^lmisc040:
+                        ^c9---------
+                        ^ca# ^cfHints ^ca#
+                        ^c9---------
+^c1
+ * Check out the <config> <options> carefully! There are
+   a lot of switches to satisfy your needs. (If anything
+   annoys you in the tracker, check the config. There may
+   be a switch for it. If not, contact Velvet Dev. and we
+   will consider adding it in the next version.)
+
+^lmisc050:
+                        ^c9----------
+                        ^ca# ^cfFuture ^ca#
+                        ^c9----------
+^c1
+  There are a lot of things to implement in such a
+complex program as this, but right now we will have a
+long break from coding trackers, so we don't know when a
+new release will come. But I know that if we someday feel
+like including more stuff, we have an incredibly big,
+ever growing to-do list to get ideas from.
+
+^lmisc060:
+                ^c9-------------------------
+                ^ca# ^cfVelvet Development News ^ca#
+                ^c9-------------------------
+^c1
+Velvet Development is a company run by Patrik Oscarsson
+and David Broman (Baldric and Zyric). Our main goal
+is to get this program out on the market. After that, we
+have some other projects planned.
+Extreme has decided to change names to match our company
+so that there won't be any confusion.
+
+                      ^c6### ^ccCoders ^c6###
+^c1
+                Baldric . Vicious . Zyric
+
+                    ^c6### ^ccMusicians ^c6###
+^c1
+                         ToneDeaf
+
+                   ^c6### ^ccGraphicians ^c6###
+^c1
+                          Oxbow
+
+                      ^c6### ^ccSysops ^c6###
+^c1
+                     Crack: Methadone
+                      +358-0-4208227
+
+^lmisc070:
+                       ^c9-----------
+                       ^ca# ^cfContact ^ca#
+                       ^c9-----------
+^c1
+  For comments, ideas, bugreports and suggestions,
+  contact us:
+
+                     Velvet Development
+                       Att. D.Broman
+                          Hagafors
+                        560 13 Hook
+
+
+                E-Mail: i96davbr@island.liu.se
+
+^lmisc080:
+                       ^c9-----------
+                       ^ca# ^cfCredits ^ca#
+                       ^c9-----------
+^c1
+                       ^c6### ^ccCode ^c6###
+^c1
+             Patrik Oscarsson . David Broman
+
+                     ^c6### ^ccGraphics ^c6###
+^c1
+      Baldric . Zyric . TAP . Negspect . Rubber Duck
+
+                     ^c6### ^ccHelptext ^c6###
+^c1
+                Vicious . Ozone . Baldric
+
+                      ^c6### ^ccManual ^c6###
+^c1
+                     Peter A. Kudenov
+
+^lmisc090:
+                    ^c9-----------------
+                    ^ca# ^cfClosing words ^ca#
+                    ^c9-----------------
+^c1
+  In this release there are a lot of new functions, a new
+layout and many other new things. That's the main reason
+why it took so long to finish v2.0. We really hope that
+you will enjoy using it, since we have worked really hard
+on this product. Our main goal is to satisfy the users of
+the tracker, and that's why I ask you to send comments,
+and bugreports to us.
+
+^lmisc100:
+                   ^c9--------------------
+                   ^ca# ^cfAcknowledgements ^ca#
+                   ^c9--------------------
+^c1
+   (If I've forgotten someone, sorry and let me know!)
+
+           ^c6### ^ccMucho thanks to these people ^c6###
+^c1
+                      Adam Seychell:
+               DOS32 Protected mode system
+
+             Andre Pang (aka Ozone/Heretics)
+               Helpfile and document writer
+                   KeyMap configuration
+                  Option HelpText Writer
+
+                Carlos Hasan (aka Pelusa):
+              SB Optimization! (BIG THANX!).
+
+                     Joshua C Jensen:
+         Some info on commands in PPS sourcecode.
+
+                 Kristoffer Henning and:
+                       Martin Hoven
+                Soundblaster Pro supplier.
+
+                    Michiel Ouwehand:
+                  GUS ClickRemoval docs.
+
+                      Mr Destroyer:
+                     GUS information.
+
+         Niklas Beisert (aka Pascal/Cubic Team):
+                     SB coding help.
+
+            Stefan Wirebrandt (aka Wirefire):
+                Soundblaster 16 supplier.
+                   (for a loong time :)
+
+                    Thomas Pytel and:
+                     Charles Sheffold
+                  Protected Mode System
+
+  ^c6### ^ccSpecial thanks to our betatesters for all the ^c6###
+^cc      effort, ideas and comments they've given to us
+^c1
+                     Andreas Wessman
+             Andre Pang (aka Ozone/Heretics)
+                     Claes Mellang†rd
+                 Daniel Falk (aka Leinad)
+                     Daniel Liljegren
+                     Emil Gustavsson
+          Jussi K„rkk„inen (aka ToneDeaf/Velvet)
+               Marc Brown (aka Maruku/SAS)
+             Peter A. Kudenov (aka Eledhrim)
+            Pontus Munck (aka Vicious/Velvet)
+           Sebastian Meyer (aka Xylon/Mode 19)
+  Simon Jarosch (a.k.a Vivid / KFMF and Radical Rhythms)
+
+   ^c6### ^ccThanks to the following guys for bugreports, ^c6###
+^cc            ideas, comments and encouragement
+^c1
+
+                     Alex B. Novikov
+              Alex Wicks (aka ACiDZ/Apathy)
+         Andrew Fort (aka Chuck Biscuits/Kosmic)
+                      Bo Vestergaard
+                  Chris Kowalske/GodHead
+         Christian Haarmeijer (aka Voodoo Child)
+                     Craig Galbraith
+                    Gravedigger/Hornet
+                      Henri Vilminko
+                      HybRiS/Orchide
+               Jeremy Evers (aka Negspect)
+                   Jo Haavar Slangsvold
+                        Kane/SMASH
+                       Lutz Roeder
+                        Maciek/MAD
+                     Michal Karpinski
+              Paul Bragiel (aka Pyromaniac)
+           Peter van den Boogaard (aka Chojin)
+                          Primal
+                      Scholar / $een
+                       Scott Laraby
+                      Sven Degroote
+              Xigh and Asle/Lithium & ReDoX
+
+All the guys at #coders on IRC and everybody else who I
+can't remember! remind me to put you in here!
+
+^c9   And of course a special thanks to YOU, for using and
+                 supporting this program!
+^c1
+                             ^cc- ^cfThe Velvet Studio team
+^c1
+^c6---------------------------------------------------------
+                 ^c4### ^cfEND OF HELPTEXT ^c4###
+^c6---------------------------------------------------------
+^c1^c3
+             ozone's helptext revision 950921
+             Baldric's update 951221,960121,960321,960701,970324
+^c1

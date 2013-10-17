@@ -1,0 +1,89 @@
+
+
+
+
+                 ÄÄÄÄÄ  Extreme Tracker. AMS Format v1.30 ÄÄÄÄÄÄ
+
+Extreme Tracker was the working name of Velvet Studio, and we released some
+beta versions of it, hence there might be some AMS songs out there using this
+format.
+
+
+Offs   Byte(s)	Desc
+
+[Header]
+0	7	Header: "Extreme"
+7       2       Version of format (Hi = MainVer, Low = SubVer eg. 0130 = 1.30)
+9	1	cccsssss
+		c = Nr of Commands used in tune,
+		s = Nr of Sample channels-1 used in tune (0-31)
+10	1	Nr of Samples (0-255)
+11	2	Nr of Patterns (1-65535)
+13	2	Nr of Positions (1-65535)
+15      1       Unused
+16      2       Unused
+
+[Sample]
+	4	Length Of Sample
+	4	Repeat Start for sample
+	4	Repeat End for sample
+	1	Hi Nibble=PanPosition, Lo Nibble=FineTuneValue
+	2	SampleRate for C-2 (normally 8363Hz)
+	1	Volume (0-127) MIDI Compatible
+	1	Info Byte 76543210  If set to 1:
+			  ³³³³³³ÀÁÄ Packing Method
+			  ³ÀÁÁÁÁÄÄÄ Unused
+			  ÀÄÄÄÄÄÄÄÄ 16 bit sample
+
+ Data for rest of samples are exactly the same!
+
+[Names]
+	1	Length of ModName (max 30 bytes)
+	x	ModName
+	1	Length of SampName (max 30 bytes)
+	x	SampName(s)
+	1	Length of ChannelName (max 11 bytes)
+	x	ChannelName(s)
+	1	Length of PatternName (max 10 bytes)
+	x	PatternName(s)
+	2	Length of Description (max 65535 bytes)
+	x	Description of Module
+
+ The Number of SampleNames are equal to nr of Samples used
+ The Number of ChannelNames are equal to nr of Channels used
+ The Number of PatternNames are equal to nr of Patterns used
+
+[PatternOrder]
+	x	PatternNr. Holds number (0-65535) to tell the tracker what
+		pattern to play at that position
+
+[PatternData]
+	4	PatternSize (packed)
+	x	PatternData
+
+        fp0iiiii ennnnnnn ssssssss [rgcccccc bbbbbbbb...]
+
+		Legend:
+                f       1=Last data chunk on the row.
+                p       0=Only Read Period+SampleNr, 1=Only Read Command
+                0       Unused
+                i       Channel (Samp 0-31, MIDI 0-15)
+                e       1=Read one command
+                n       Note 12-108 (C-2 to B-9)
+                s       SampleNr (0-255)
+                r       1=Read one more command
+                g       1=Low 6 bits are volume/2
+                c       Command-nr
+                b       Command-byte
+
+		If g is set, the command only consist of that byte and
+		the low 6 bits are assumed to be a volume command. You
+		have to multiply the volume by 2 to get the proper value
+                (Volume will only be stored this way if it's even)
+
+[Samples]
+        All samples stored after eachother, maybe packed with a special packing
+        method. Not described here!
+
+
+
