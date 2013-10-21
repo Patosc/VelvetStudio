@@ -530,4 +530,3 @@ ColorPreDef:
 	call	TableToDragbar
 	call	UpdateTheColors
 	jmp	_retp
-

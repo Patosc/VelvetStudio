@@ -2967,4 +2967,3 @@ ENDIF
 	jmp     _Retp_stc
 SBP_CheckSpeech	EndP
 
-
