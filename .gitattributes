@@ -1,12 +1,12 @@
-*.ams                -text
-*.asm                text eol=crlf
-*.bat                text eol=crlf
-*.diz                text eol=crlf
-*.inc                text eol=crlf
-*.nfo                text eol=crlf
-*.obj                -text
-*.pro                -text
-*.eff                -text
-*.cfg                -text
-*.hlp                text eol=crlf
-*.txt                text eol=crlf
+*.asm		text
+*.bat		text
+*.diz		text
+*.inc		text
+*.nfo		text
+*.txt		text
+*.hlp		text
+*.ams		-text
+*.cfg		-text
+*.eff		-text
+*.obj		-text
+*.pro		-text

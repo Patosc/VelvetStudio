@@ -56,4 +56,3 @@ Global gardellen:byte:1010,updatebuffa:byte:32*100,EndText4:Byte
 Global CO1:Byte,CO2:Byte,CO3:Byte,CO4:Byte,CO5:Byte,CO6:Byte,CO7:Byte,CO8:Byte,CO9:Byte
 Global COS1:Byte,COS2:Byte,COS3:Byte,COS4:Byte,COS5:Byte,COS6:Byte,COS7:Byte,COS8:Byte,COS9:Byte
 Global COH1:Byte,COH2:Byte,COH3:Byte,COH4:Byte,COH5:Byte,COH6:Byte,COH7:Byte,COH8:Byte,COH9:Byte
-
